@@ -66,7 +66,7 @@ function fetchAll($sql,$result_type=MYSQL_ASSOC){
                         <li><a class="scroll" href="member.html">比赛学员</a></li>
                         <li><a class="scroll" href="http://y.qq.com/topic/voice4/index.html?ADTAG=baidualdhsy"
                                target="_blank">音乐试听</a></li>
-                        <li class="active"><a class="scroll" href="vote.html">为他投票</a></li>
+                        <li class="active"><a class="scroll" href="vote.php">为他投票</a></li>
                         <li><a class="scroll" href="#contact">联系我们</a></li>
                         <div class="clear"></div>
                     </ul>
