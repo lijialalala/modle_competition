@@ -67,7 +67,7 @@ height:280px;
     color:#cc0000;
 
 }
-.votedo .cvote .vote
+.votedo .cvote
 {
     float:right;
     width:55px;
