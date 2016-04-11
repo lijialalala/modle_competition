@@ -40,13 +40,16 @@ function fetchAll($sql,$result_type=MYSQL_ASSOC){
         $(document).ready(function () {
             $(".artist_l li .cvote").click(function () {
                 var nowdo = $(this);
+                //歌手名
                 var baby = nowdo.parent().parent().find(".tag_txt").html();
+                //票数
                 var nowvote = nowdo.parent().find(".cvotenum b").html();
                 nowdo.parent().find(".cvotenum b").html(parseInt(nowvote) + 1);
                 alert("亲！您刚刚为第三季中国好声音的" + baby + "投了一票！谢谢您的投票！");
-                $.post(URL,{参数1:alue,参数2:value2},function(data){
-						//这里你可以处理获取的数据。我使用是json 格式。你也可以使用其它格式。或者为空，让它自己判断得了
-						},'json');
+                $.post("doAction.php",{singer_name:baby,singer_votes:nowvote},function(data){
+                        //这里你可以处理获取的数据。我使用是json 格式。你也可以使用其它格式。或者为空，让它自己判断得了
+                        console.log(baby);
+                        },'json');
             });
         });
     </script>
