@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" media="all" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" media="all" href="css/style.min.css"/>
     <script src="js/jquery.min.js"></script>
 </head>
 <body>
@@ -21,7 +21,7 @@
                             <li class="member"><a class="scroll" href="#">比赛选手</a></li>
                             <li><a class="scroll" href="http://www.mgtv.com/v/2016/wsgs4/?f=bdpz"
                                    target="_blank">音乐试听</a></li>
-                            <li><a class="scroll vote" href="#">为他投票</a></li>
+                            <li><a class="scroll vote" href="vote.php">为他投票</a></li>
                             <li><a class="scroll" href="#contact">联系我们</a></li>
                             <div class="clear"></div>
                         </ul>
@@ -134,7 +134,7 @@
                             <div class="hexagon_container" id="team">
                                 <div class="hexagon hexagon2">
                                     <div class="hexagon-in1">
-                                        <a href="member.html" target="_blank">
+                                        <a href="#" class="member_more">
                                             <div class="hexagon-in2">
                                                 <i class="fa fa-users"></i>
 
@@ -147,7 +147,7 @@
                             <div class="hexagon_container" id="services">
                                 <div class="hexagon hexagon2">
                                     <div class="hexagon-in1">
-                                        <a href="vote.html">
+                                        <a href="vote.php">
                                             <div class="hexagon-in2">
                                                 <i class="fa fa-thumbs-up"></i>
 
@@ -261,7 +261,7 @@
                                 </div>
                             </div>
                             <div class="pagination">
-                                <a href="#" id="more">阅读更多</a>
+                                <a href="#" class="member_more">阅读更多</a>
                             </div>
                         </div>
                     </div>
@@ -2155,57 +2155,7 @@
 <!-- scroll_top_btn -->
 <script type="text/javascript" src="js/move-top.js"></script>
 <script type="text/javascript" src="js/easing.js"></script>
-<script type="text/javascript">
-    var JQuery = jQuery.noConflict();
-    JQuery(document).ready(function () {
-        JQuery('#da-slider').cslider({
-            autoplay: true,
-            bgincrement: 450
-        });
-
-        var defaults = {
-            containerID: 'toTop', // fading element id
-            containerHoverID: 'toTopHover', // fading element hover id
-            scrollSpeed: 1200,
-            easingType: 'linear'
-        };
-        JQuery().UItoTop({easingType: 'easeOutQuart'});
-    });
-    var home = JQuery(".home"),
-        member = JQuery(".member"),
-        vote = JQuery(".vote"),
-        hearder = JQuery(".header_bg"),
-        homepage = JQuery("#home_page"),
-        memberpage = JQuery("#member_page"),
-        votepage = JQuery("#vote_page"),
-        more = JQuery("#more");
-
-    var onloadDifferentPage = function(){
-        home.bind("click",function(){
-            JQuery(".home,.member,.vote").removeClass("active");
-            home.addClass("active");
-            JQuery("#home_page,#member_page,#vote_page").css("display","none");
-            homepage.css("display","block");    
-        });
-
-        JQuery(".member,#more").each(function(){
-            JQuery(this).bind("click",function(){
-                JQuery(".home,.member,.vote").removeClass("active");
-                member.addClass("active");
-                JQuery("#home_page,#member_page,#vote_page").css("display","none");
-                memberpage.css("display","block");   
-            });
-        });
-        
-        vote.bind("click",function(){
-            JQuery(".home,.member,.vote").removeClass("active");
-            vote.addClass("active");
-            JQuery("#home_page,#member_page,#vote_page").css("display","none");
-            votepage.css("display","block");   
-        });
-    };
-    onloadDifferentPage();
-</script>
+<script type="text/javascript" src="js/index.js"></script>
 <a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;"></span></a>
 <script type="text/javascript" src="js/easing.js"></script>
     <script type="text/javascript" src="js/move-top.js"></script>
