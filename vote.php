@@ -56,7 +56,7 @@ function fetchAll($sql,$result_type=MYSQL_ASSOC){
     </script>
 </head>
 <body>
-<div class="header_bg">
+<!-- <div class="header_bg">
     <div class="wrap">
         <div id="content">
             <header id="topnav">
@@ -84,7 +84,7 @@ function fetchAll($sql,$result_type=MYSQL_ASSOC){
             <script type="text/javascript" src="js/menu.js"></script>
         </div>
     </div>
-</div>
+</div> -->
 <div id="container">
     <div class="itagBox">
         <ul class="artist_l">
@@ -226,7 +226,7 @@ function fetchAll($sql,$result_type=MYSQL_ASSOC){
         </ul>
     </div>
 </div>
-<div class="contact" id="contact">
+<!-- <div class="contact" id="contact">
     <div class="wrap">
         <h2>联系我们</h2>
 
@@ -244,11 +244,8 @@ function fetchAll($sql,$result_type=MYSQL_ASSOC){
                 </div>
                 <div class="get-intouch-left-address">
                     <ul>
-                        <!-- <li class="f_l"><a href="http://www.letvcloud.com/" target="_blank"><img
-                                src="images/logo1.jpg"/></a></li> -->
                         <li class="f_l" style="width:40%;"><a href="https://www.upyun.com/index.html" target="_blank"><img
                                 src="images/logo2.jpg" style="width:100%;display:block;" /></a></li>
-                        <!-- <li class="f_r"><p>联系我们：we@zjstv.com</p></li> -->
                     </ul>
 
                 </div>
@@ -279,7 +276,7 @@ function fetchAll($sql,$result_type=MYSQL_ASSOC){
             <div class="clear"></div>
         </div>
     </div>
-</div>
+</div> -->
 <!-- scroll_top_btn -->
 <script type="text/javascript">
     $(document).ready(function () {

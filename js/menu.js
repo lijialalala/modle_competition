@@ -1,25 +1,26 @@
-$(function () {
-    var nb = $('#navbtn');
-    var n = $('#topnav nav');
+var JQuery = jQuery.noConflict();
+JQuery(function () {
+    var nb = JQuery('#navbtn');
+    var n = JQuery('#topnav nav');
 
-    $(window).on('resize', function () {
+    JQuery(window).on('resize', function () {
 
-        if ($(this).width() < 570 && n.hasClass('keep-nav-closed')) {
+        if (JQuery(this).width() < 570 && n.hasClass('keep-nav-closed')) {
             // if the nav menu and nav button are both visible,
             // then the responsive nav transitioned from open to non-responsive, then back again.
             // re-hide the nav menu and remove the hidden class
-            $('#topnav nav').hide().removeAttr('class');
+            JQuery('#topnav nav').hide().removeAttr('class');
         }
-        if (nb.is(':hidden') && n.is(':hidden') && $(window).width() > 569) {
+        if (nb.is(':hidden') && n.is(':hidden') && JQuery(window).width() > 569) {
             // if the navigation menu and nav button are both hidden,
             // then the responsive nav is closed and the window resized larger than 560px.
             // just display the nav menu which will auto-hide at <560px width.
-            $('#topnav nav').show().addClass('keep-nav-closed');
+            JQuery('#topnav nav').show().addClass('keep-nav-closed');
         }
     });
-    $('#navbtn').on('click', function (e) {
+    JQuery('#navbtn').on('click', function (e) {
         e.preventDefault();
-        $("#topnav nav").slideToggle(350);
+        JQuery("#topnav nav").slideToggle(350);
     });
 
 });

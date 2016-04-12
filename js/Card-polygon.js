@@ -3,6 +3,7 @@
 /**
  * Card.
  */
+
 var Card = (function(window, undefined) {
 
   /**
