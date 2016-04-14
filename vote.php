@@ -24,12 +24,11 @@ function fetchAll($sql,$result_type=MYSQL_ASSOC){
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<!-- saved from url=(0119)http://www.17sucai.com/preview/38769/2015-07-26/jQuery%E6%8A%95%E7%A5%A8%E5%BE%81%E5%90%8D%E4%BB%A3%E7%A0%81/index.html -->
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-    <title>中国好声音第四季投票</title>
+    <title>第四季《我是歌手》投票</title>
 
     <link type="text/css" rel="stylesheet" href="css/vote.css">
     <link type="text/css" rel="stylesheet" href="css/style.css">
@@ -46,7 +45,7 @@ function fetchAll($sql,$result_type=MYSQL_ASSOC){
                 var nowvote = nowdo.parent().find(".cvotenum b").html();
 		var num=parseInt(nowvote)+1;
                 nowdo.parent().find(".cvotenum b").html(parseInt(nowvote) + 1);
-                alert("亲！您刚刚为第三季中国好声音的" + baby + "投了一票！谢谢您的投票！");
+                alert("亲！您刚刚为第四季《我是歌手》的" + baby + "投了一票！谢谢您的投票！");
                 $.post("./doAction.php",{singer_name:baby,singer_votes:num},function(data){
                         //这里你可以处理获取的数据。我使用是json 格式。你也可以使用其它格式。或者为空，让它自己判断得了
                         console.log(baby);
@@ -56,14 +55,14 @@ function fetchAll($sql,$result_type=MYSQL_ASSOC){
     </script>
 </head>
 <body>
-<!-- <div class="header_bg">
+<div class="header_bg">
     <div class="wrap">
         <div id="content">
             <header id="topnav">
                 <nav>
                     <ul>
                         <li><a class="scroll" href="index.html">主页</a></li>
-                        <li><a class="scroll" href="member.html">比赛学员</a></li>
+                        <li><a class="scroll" href="member.html">比赛选手</a></li>
                         <li><a class="scroll" href="http://y.qq.com/topic/voice4/index.html?ADTAG=baidualdhsy"
                                target="_blank">音乐试听</a></li>
                         <li class="active"><a class="scroll" href="vote.php">为他投票</a></li>
@@ -80,11 +79,11 @@ function fetchAll($sql,$result_type=MYSQL_ASSOC){
 
                 <div class="clear"></div>
             </header>
-            <!-- @end #topnav -->
+
             <script type="text/javascript" src="js/menu.js"></script>
         </div>
     </div>
-</div> -->
+</div>
 <div id="container">
     <div class="itagBox">
         <ul class="artist_l">
@@ -226,7 +225,7 @@ function fetchAll($sql,$result_type=MYSQL_ASSOC){
         </ul>
     </div>
 </div>
-<!-- <div class="contact" id="contact">
+<div class="contact" id="contact">
     <div class="wrap">
         <h2>联系我们</h2>
 
@@ -276,7 +275,7 @@ function fetchAll($sql,$result_type=MYSQL_ASSOC){
             <div class="clear"></div>
         </div>
     </div>
-</div> -->
+</div>
 <!-- scroll_top_btn -->
 <script type="text/javascript">
     $(document).ready(function () {
