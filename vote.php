@@ -93,7 +93,7 @@ function fetchAll($sql,$result_type=MYSQL_ASSOC){
                     <div class="tag_txt">
                         李克勤
                     </div>
-                    <a href="" style="top: -150px;">
+                    <a href="" style="top: -250px;">
                         <p>雾之恋（第一期）</p>
 
                         <p>当我知道你们相爱（第二期）</p>
@@ -114,7 +114,7 @@ function fetchAll($sql,$result_type=MYSQL_ASSOC){
                     <div class="tag_txt">
                         黄致列
                     </div>
-                    <a href="" style="top: -150px;">
+                    <a href="" style="top: -250px;">
                         <p>那个人（第一期）</p>
 
                         <p>从开始到现在（第二期）</p>
@@ -135,7 +135,7 @@ function fetchAll($sql,$result_type=MYSQL_ASSOC){
                     <div class="tag_txt">
                         徐佳莹
                     </div>
-                    <a href="" style="top: -150px;">
+                    <a href="" style="top: -250px;">
                         <p>失落沙洲（第一期）</p>
                         <p>修炼爱情（第二期）</p>
                         <p>不醉不会（第三期）</p>
@@ -153,7 +153,7 @@ function fetchAll($sql,$result_type=MYSQL_ASSOC){
                     <div class="tag_txt">
                         张信哲
                     </div>
-                    <a href="" style="top: -150px;">
+                    <a href="" style="top: -250px;">
                         <p>信仰（第四期）</p>
                         <p>二十年以前（第五期）</p>
                         <p>爱的箴言（第六期）</p>
@@ -171,7 +171,7 @@ function fetchAll($sql,$result_type=MYSQL_ASSOC){
                     <div class="tag_txt">
                         容祖儿
                     </div>
-                    <a href="" style="top: -150px;">
+                    <a href="" style="top: -250px;">
                         <p>月半小夜曲（第七期）</p>
 
                         <p>想着你的感觉（第八期）</p>
@@ -190,7 +190,7 @@ function fetchAll($sql,$result_type=MYSQL_ASSOC){
                     <div class="tag_txt">
                         李玟
                     </div>
-                    <a href="" style="top: -150px;">
+                    <a href="" style="top: -250px;">
                         <p>想念你（第一期）</p>
 
                         <p>爱之初体验（第二期）</p>
@@ -211,7 +211,7 @@ function fetchAll($sql,$result_type=MYSQL_ASSOC){
                     <div class="tag_txt">
                         老狼
                     </div>
-                    <a href="" style="top: -150px;">
+                    <a href="" style="top: -250px;">
                         <p>旅途（第十期）</p>
 
                         <p>冬季校园（第十一期）</p>

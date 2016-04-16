@@ -12,6 +12,27 @@ var JQuery = jQuery.noConflict();
             easingType: 'linear'
         };
         JQuery().UItoTop({easingType: 'easeOutQuart'});
+
+        Jquery('.artist_l li').each(function (m) {
+        Jquery(this).find('a').css('top', -250);
+        Jquery(this).hover(function () {
+                Jquery(this).find('a').animate({
+                        'top': '0'
+                    },
+                    500)
+            },
+            function () {
+                Jquery(this).find('a').animate({
+                        'top': 150
+                    },
+                    {
+                        duration: 500,
+                        complete: function () {
+                            Jquery(this).css('top', -250)
+                        }
+                    })
+            })
+    });
     });
 var home = JQuery(".home"),
     member = JQuery(".member"),
