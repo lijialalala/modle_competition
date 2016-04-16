@@ -33,7 +33,6 @@ function fetchAll($sql,$result_type=MYSQL_ASSOC){
     <link type="text/css" rel="stylesheet" href="css/vote.css">
     <link type="text/css" rel="stylesheet" href="css/style.css">
     <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript">
         JQuery(document).ready(function () {
@@ -277,6 +276,8 @@ function fetchAll($sql,$result_type=MYSQL_ASSOC){
     </div>
 </div>
 <!-- scroll_top_btn -->
+<script type="text/javascript" src="js/jquery.cslider.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
 <a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;"></span></a>
 <script type="text/javascript" src="js/move-top.js"></script>
 <script type="text/javascript" src="js/easing.js"></script>
