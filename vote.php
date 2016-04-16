@@ -35,6 +35,7 @@ function fetchAll($sql,$result_type=MYSQL_ASSOC){
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript">
+    var JQuery = jQuery.noConflict();
         JQuery(document).ready(function () {
             JQuery(".artist_l li .cvote").click(function () {
                 var nowdo = JQuery(this);
