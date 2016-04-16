@@ -36,17 +36,17 @@ function fetchAll($sql,$result_type=MYSQL_ASSOC){
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript">
-        $(document).ready(function () {
-            $(".artist_l li .cvote").click(function () {
-                var nowdo = $(this);
+        JQuery(document).ready(function () {
+            JQuery(".artist_l li .cvote").click(function () {
+                var nowdo = JQuery(this);
                 //歌手名
                 var baby = nowdo.parent().parent().find(".tag_txt").html();
                 //票数
                 var nowvote = nowdo.parent().find(".cvotenum b").html();
-		var num=parseInt(nowvote)+1;
+		        var num=parseInt(nowvote)+1;
                 nowdo.parent().find(".cvotenum b").html(parseInt(nowvote) + 1);
                 alert("亲！您刚刚为第四季《我是歌手》的" + baby + "投了一票！谢谢您的投票！");
-                $.post("./doAction.php",{singer_name:baby,singer_votes:num},function(data){
+                JQuery.post("./doAction.php",{singer_name:baby,singer_votes:num},function(data){
                         //这里你可以处理获取的数据。我使用是json 格式。你也可以使用其它格式。或者为空，让它自己判断得了
                         console.log(baby);
                         },'json');
@@ -277,21 +277,6 @@ function fetchAll($sql,$result_type=MYSQL_ASSOC){
     </div>
 </div>
 <!-- scroll_top_btn -->
-<script type="text/javascript">
-    $(document).ready(function () {
-
-        var defaults = {
-            containerID: 'toTop', // fading element id
-            containerHoverID: 'toTopHover', // fading element hover id
-            scrollSpeed: 1200,
-            easingType: 'linear'
-        };
-
-
-        $().UItoTop({easingType: 'easeOutQuart'});
-
-    });
-</script>
 <a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;"></span></a>
 <script type="text/javascript" src="js/move-top.js"></script>
 <script type="text/javascript" src="js/easing.js"></script>
