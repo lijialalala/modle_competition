@@ -6,11 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" media="all" href="css/style.min.css"/>
+    <link rel="stylesheet" type="text/css" media="all" href="css/index.css"/>
     <script src="js/jquery.min.js"></script>
 </head>
 <body>
 <!-- start header -->
 <div id="container">
+    <div class="main none">
+        <div class="content">
+            <ul>
+                <li class="regist activeli">注册</li>
+                <li class="log">登陆</li>
+            </ul>
+            <i class="close card__btn-close fa fa-times"></i>
+            <div class="wrapper">
+              <div class="login_page template none">
+                  <div class="line">
+                      <span>帐号:</span>
+                        <input type="text" class="user_name" placeholder="请输入帐号名" />
+                  </div>
+                  <div class="line">
+                      <span>密码:</span>
+                        <input type="text" class="password" placeholder="请输入密码" />
+                  </div>
+                  <input type="submit" class="sub_btn" value="登录" />  
+              </div>
+              <div class="regist_page template">
+                  <div class="line">
+                      <span>帐号:</span>
+                        <input type="text" class="user_name" placeholder="请输入帐号名" />
+                  </div>
+                  <div class="line">
+                      <span>密码:</span>
+                        <input type="text" class="password" placeholder="请输入密码" />
+                  </div>
+                  <div class="line">
+                      <span>再次输入密码:</span>
+                        <input type="text" class="repassword" placeholder="请再次输入密码" />
+                  </div>
+                  <input type="submit" class="sub_btn" value="注册" />  
+              </div>
+            </div>        
+        </div>
+    </div>
+    <!-- <div class="mask none"></div> -->
     <div class="header_bg" style="background-color:#fff;">
         <div class="wrap">
             <div id="content">
@@ -23,6 +62,7 @@
                                    target="_blank">音乐试听</a></li>
                             <li><a class="scroll vote" href="vote.php">为他投票</a></li>
                             <li><a class="scroll" href="#contact">联系我们</a></li>
+                            <li><a class="scroll login_btn" href="#">注册/登录</a></li>
                             <div class="clear"></div>
                         </ul>
                     </nav>
@@ -2085,15 +2125,11 @@
                     </div>
         </div>
         <!-- /cards -->
-    </div>
-</div>
-    <!--  <div id="vote_page">
-    投票页面在这里
-    </div> --> 
+            </div>
+        </div>
 <!-- /content -->
-</div>  
+    </div>  
 </div>
-    <!-- <iframe id="vote_page" src="vote.php" frameborder="0" scrolling="none"></iframe> -->
     <!--start-contact-->
     <div class="contact" id="contact">
         <div class="wrap">

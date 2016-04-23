@@ -1,0 +1,97 @@
+.none{
+	display: none;
+}
+.main{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(86, 65, 107, 0.77);	
+	position:fixed;
+	z-index: 999999;
+	.content{
+		top: 20%;
+		width: 40%;
+		height:50%;
+		max-width: 630px;
+		min-width: 320px;
+		color: #fff;
+		background: #f5f5f5;
+		position: relative;
+		border-radius: 3px;
+		margin: 0 auto;
+		-webkit-transform: translateX(-50%) translateY(-50%);
+		-moz-transform: translateX(-50%) translateY(-50%);
+		-ms-transform: translateX(-50%) translateY(-50%);
+		transform: translateX(-50%) translateY(-50%);
+		-webkit-transform: scale(1.2);
+		-moz-transform: scale(1.2);
+		-ms-transform: scale(1.2);
+		transform: scale(1.2);
+		-webkit-transition: all 0.3s ease-in-out;
+		-moz-transition: all 0.3s ease-in-out;
+		transition: all 0.3s ease-in-out;
+
+		ul{
+			float: left;
+			li{
+			font-size: 17px;
+			color:#000;
+			padding: 10px;
+			float: left;
+			border-bottom: 2px solid #ddd; 
+			}
+			.activeli{
+				border-bottom: 2px solid #c83434;
+			}
+		} 
+		.close{
+			float:right;
+			color: #000;
+    		padding: 16px;
+		}
+		.wrapper{
+			width:70%;
+			float:left;
+			color:#000;
+			margin: 30px auto auto 60px;
+			.template{
+				width:100%;
+				height:100%;
+				.line{
+					float: left;
+					margin-top: 10px;
+					span{
+						display: block;
+						float: left;
+						margin:auto 10px auto 20px;
+					}
+					input{
+						float: right;
+						display:inline-block;
+						padding: 5px;
+						border: 1px solid #ddd;
+	    				border-radius: 5px;
+					}
+				}
+				.sub_btn{
+					width:100%;
+					float:left;
+					margin:20px auto auto auto;
+					display:inline-block;
+					padding: 10px 5px;
+					border: 1px solid #ddd;
+    				border-radius: 5px;
+    				color:#fff;
+    				background-color: #c83434;
+				}
+			}
+		.regist_page{
+			height:60%;
+			.line .repassword{
+				float:left;
+				
+			}
+		}
+		
+		}
+	}
+}
