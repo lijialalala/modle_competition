@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" media="all" href="css/style.min.css"/>
-    <link rel="stylesheet" type="text/css" media="all" href="css/index.css"/>
     <script src="js/jquery.min.js"></script>
 </head>
 <body>
@@ -16,7 +15,7 @@
         <div class="content">
             <ul>
                 <li class="regist activeli">注册</li>
-                <li class="log">登陆</li>
+                <li class="log">登录</li>
             </ul>
             <i class="close card__btn-close fa fa-times"></i>
             <div class="wrapper">
@@ -29,7 +28,8 @@
                       <span>密码:</span>
                         <input type="text" class="password" placeholder="请输入密码" />
                   </div>
-                  <input type="submit" class="sub_btn" value="登录" />  
+                  <input type="submit" class="sub_btn" value="登录" /> 
+                  <div class="warnning"></div> 
               </div>
               <div class="regist_page template">
                   <div class="line">
@@ -45,9 +45,11 @@
                         <input type="text" class="repassword" placeholder="请再次输入密码" />
                   </div>
                   <input type="submit" class="sub_btn" value="注册" />  
+                  <div class="warnning"></div> 
               </div>
             </div>        
         </div>
+        <div class="mask"></div>
     </div>
     <!-- <div class="mask none"></div> -->
     <div class="header_bg" style="background-color:#fff;">
