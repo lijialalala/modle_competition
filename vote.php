@@ -56,6 +56,46 @@ function fetchAll($sql,$result_type=MYSQL_ASSOC){
 </head>
 <body>
 <div class="header_bg">
+    <div class="main none">
+        <div class="content">
+            <ul>
+                <li class="regist activeli">注册</li>
+                <li class="log">登录</li>
+            </ul>
+            <i class="close card__btn-close fa fa-times"></i>
+            <div class="wrapper">
+              <div class="login_page template none">
+                  <div class="line">
+                      <span>帐号:</span>
+                        <input type="text" class="user_name" placeholder="请输入帐号名" />
+                  </div>
+                  <div class="line">
+                      <span>密码:</span>
+                        <input type="text" class="password" placeholder="请输入密码" />
+                  </div>
+                  <input type="submit" class="sub_btn" value="登录" /> 
+                  <div class="warnning"></div> 
+              </div>
+              <div class="regist_page template">
+                  <div class="line">
+                      <span>帐号:</span>
+                        <input type="text" class="user_name" placeholder="请输入帐号名" />
+                  </div>
+                  <div class="line">
+                      <span>密码:</span>
+                        <input type="text" class="password" placeholder="请输入密码" />
+                  </div>
+                  <div class="line">
+                      <span>再次输入密码:</span>
+                        <input type="text" class="repassword" placeholder="请再次输入密码" />
+                  </div>
+                  <input type="submit" class="sub_btn" value="注册" />  
+                  <div class="warnning"></div> 
+              </div>
+            </div>        
+        </div>
+        <div class="mask"></div>
+    </div>
     <div class="wrap">
         <div id="content">
             <header id="topnav">
@@ -67,6 +107,7 @@ function fetchAll($sql,$result_type=MYSQL_ASSOC){
                                target="_blank">音乐试听</a></li>
                         <li class="active"><a class="scroll" href="vote.php">为他投票</a></li>
                         <li><a class="scroll" href="#contact">联系我们</a></li>
+                        <li><a class="scroll login_btn" href="#">注册/登录</a></li>
                         <div class="clear"></div>
                     </ul>
                 </nav>
@@ -85,6 +126,43 @@ function fetchAll($sql,$result_type=MYSQL_ASSOC){
     </div>
 </div>
 <div id="container">
+    <div class="main none">
+        <div class="content">
+            <ul>
+                <li class="regist activeli">注册</li>
+                <li class="log">登陆</li>
+            </ul>
+            <i class="close card__btn-close fa fa-times"></i>
+            <div class="wrapper">
+              <div class="login_page template none">
+                  <div class="line">
+                      <span>帐号:</span>
+                        <input type="text" class="user_name" placeholder="请输入帐号名" />
+                  </div>
+                  <div class="line">
+                      <span>密码:</span>
+                        <input type="text" class="password" placeholder="请输入密码" />
+                  </div>
+                  <input type="submit" class="sub_btn" value="登录" />  
+              </div>
+              <div class="regist_page template">
+                  <div class="line">
+                      <span>帐号:</span>
+                        <input type="text" class="user_name" placeholder="请输入帐号名" />
+                  </div>
+                  <div class="line">
+                      <span>密码:</span>
+                        <input type="text" class="password" placeholder="请输入密码" />
+                  </div>
+                  <div class="line">
+                      <span>再次输入密码:</span>
+                        <input type="text" class="repassword" placeholder="请再次输入密码" />
+                  </div>
+                  <input type="submit" class="sub_btn" value="注册" />  
+              </div>
+            </div>        
+        </div>
+    </div>
     <div class="itagBox">
         <ul class="artist_l">
             <li class="tag1">

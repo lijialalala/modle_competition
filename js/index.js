@@ -51,11 +51,8 @@ var home = JQuery(".home"),
     log_page = JQuery(".login_page"),
     regist_page = JQuery(".regist_page"),
     sub_btn = JQuery(".sub_btn"),
-    user = JQuery(".user_name"),
-    password = JQuery(".password"),
-    repassword = JQuery(".repassword"),
-    line = JQuery(".line"),
-    template = JQuery(".template")
+    input_l = JQuery(".login_page .line input"),
+    input_r = JQuery(".regist_page .line input")
     ;
 
 var onloadDifferentPage = function(){
@@ -97,24 +94,64 @@ var onloadDifferentPage = function(){
         regist_page.removeClass('none');
         log_page.addClass('none');
     });
+    /**
+     * 登录 
+     */ 
+    input_l.bind("keydown",function(){
+        var user = JQuery(".login_page .user_name"),
+            password = JQuery(".login_page .password"),
+            repassword = JQuery(".login_page .repassword"),
+            line = JQuery(".login_page .line"),
+            warnning = JQuery(".login_page .warnning");
+        warnning.html("");    
+        if(user.val().length>14||user.val().length<4){
+            warnning.append("<p style='font-size:10px;color:#c83434;float:left;margin:10px auto auto 20px;'>登录失败：帐号名应为4-14长度内的！</p>");
+        }
+        if(password.val().length>14||password.val().length<6){
+            warnning.append("<p style='font-size:10px;color:#c83434;float:left;margin:10px auto auto 20px;'>登录失败：密码应为为6-14长度内的！</p>");
+        }
+        JQuery.get("./doAction.php",{name,pwd},function(data){
+           if(name!==user.val()){
+                warnning.append("<p style='font-size:10px;color:#c83434;float:left;margin:10px auto auto 20px;'>登录失败：不存在这个此用户！</p>");
+           }
+           if(pwd!==password.val()){
+                warnning.append("<p style='font-size:10px;color:#c83434;float:left;margin:10px auto auto 20px;'>登录失败：密码输入错误！</p>");
+           }
+        },'json');
+    });
+    /**
+     * 注册 
+     */
+    input_r.bind("keydown",function(){
+        var user = JQuery(".regist_page .user_name"),
+            password = JQuery(".regist_page .password"),
+            repassword = JQuery(".regist_page .repassword"),
+            line = JQuery(".regist_page .line"),
+            warnning = JQuery(".regist_page .warnning");
+        warnning.html("");    
+        if(user.val().length>14||user.val().length<4){
+            console.log(user.val());
+            console.log(user.val().length);
+            warnning.append("<p style='font-size:10px;color:#c83434;float:left;margin:10px auto auto 20px;'>注册失败：帐号名应为4-14长度内的！</p>");
+        }
+        if(password.val().length>14||password.val().length<6){
+            warnning.append("<p style='font-size:10px;color:#c83434;float:left;margin:10px auto auto 20px;'>注册失败：密码应为为6-14长度内的！</p>");
+        }
+        if(repassword.val()!==password.val()){
+            warnning.append("<p style='font-size:10px;color:#c83434;float:left;margin:10px auto auto 20px;'>注册失败：两次输入不同，请检查第二次密码输入！</p>");
+        }
+        JQuery.post("./doAction.php",{name:user,pwd:password},function(data){
+        },'json');
+    });  
+      
     close.bind("click",function(){
+        var warnning = JQuery(".warnning");
         main.addClass('none');
         mask.addClass('none');
+        warnning.html("");
+        input_l.val("");
     });
-    sub_btn.bind("click",function(){
-        if(!user.val()){
-            template.append("<p style='font-size:10px;color:#c83434;float:left;margin:10px auto auto 20px;'>注册失败：请输入帐号名！</p>");
-        }
-        if(!password.val()){
-            template.append("<p style='font-size:10px;color:#c83434;float:left;margin:10px auto auto 20px;'>注册失败：请输入密码！</p>");
-        }
-        if(!repassword.val()||repassword.val()!==password.val()){
-            template.append("<p style='font-size:10px;color:#c83434;float:left;margin:10px auto auto 20px;'>注册失败：请检查第二次密码输入！</p>");
-        }
-    })
-    // JQuery.post("./doAction.php",{singer_name:baby,singer_votes:num},function(data){
-    // console.log(baby);
-    // },'json');
+    
 
     
 };
