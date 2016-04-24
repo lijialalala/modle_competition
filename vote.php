@@ -55,14 +55,14 @@ function fetchAll($sql,$result_type=MYSQL_ASSOC){
             /*登录点击提交*/
             subbtn_l.bind("click",function(){
                 warnning_l.html("");
-                /*JQuery.get("./doAction.php",{name,pwd},function(data){
+                JQuery.get("./login.php",{name,pwd},function(data){
                    if(name!==user_l.val()){
                         warnning_l.append("<p style='font-size:10px;color:#c83434;float:left;margin:10px auto auto 20px;'>登录失败：不存在这个此用户！</p>");
                    }
                    if(pwd!==password_l.val()){
                         warnning_l.append("<p style='font-size:10px;color:#c83434;float:left;margin:10px auto auto 20px;'>登录失败：密码输入错误！</p>");
                    }
-                },'json');*/
+                },'json');
 
                 // 空表单
                 if( !(user_l.val()&&password_l.val()) ){
@@ -78,8 +78,8 @@ function fetchAll($sql,$result_type=MYSQL_ASSOC){
                 if(repassword_r.val()!=password_r.val()){
                     warnning_r.append("<p style='font-size:10px;color:#c83434;float:left;margin:10px auto auto 20px;'>注册失败：两次输入不同，请检查第二次密码输入！</p>");
                 }else{
-                    //  JQuery.post("./doAction.php",{name:user_r,pwd:password_r},function(data){
-                    // },'json');
+                      JQuery.post("./res.php",{name:user_r,pwd:password_r},function(data){
+                     },'json');
 
                     // 空表单
                     if( !(user_r.val()&&password_r.val()&&repassword_r.val()) ){
