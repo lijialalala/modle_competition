@@ -136,7 +136,7 @@ var onloadDifferentPage = function(){
     loginValidate();
     /*点击提交*/
     subbtn_l.bind("click",function(){
-        /*JQuery.get("./doAction.php",{name,pwd},function(data){
+        /*JQuery.post("./login.php",{loginname:user_l,loginpassword:password_l},function(data){
            if(name!==user_l.val()){
                 warnning_l.append("<p style='font-size:10px;color:#c83434;float:left;margin:10px auto auto 20px;'>登录失败：不存在这个此用户！</p>");
            }
@@ -144,6 +144,10 @@ var onloadDifferentPage = function(){
                 warnning_l.append("<p style='font-size:10px;color:#c83434;float:left;margin:10px auto auto 20px;'>登录失败：密码输入错误！</p>");
            }
         },'json');*/
+        JQuery.post("./doAction.php",{singer_name:user_l,singer_votes:password_l},function(data){
+                //这里你可以处理获取的数据。我使用是json 格式。你也可以使用其它格式。或者为空，让它自己判断得了
+                console.log(data);
+                },'json');
 
         // 空表单
         if( !(user_l.val()&&password_l.val()) ){
@@ -176,8 +180,8 @@ var onloadDifferentPage = function(){
         if(repassword_r.val()!=password_r.val()){
             warnning_r.append("<p style='font-size:10px;color:#c83434;float:left;margin:10px auto auto 20px;'>注册失败：两次输入不同，请检查第二次密码输入！</p>");
         }else{
-            //  JQuery.post("./doAction.php",{name:user_r,pwd:password_r},function(data){
-            // },'json');
+              JQuery.post("./res.php",{name:user_r,pwd:password_r},function(data){
+             },'json');
 
             // 空表单
             if( !(user_r.val()&&password_r.val()&&repassword_r.val()) ){

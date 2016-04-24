@@ -48,7 +48,7 @@ function fetchAll($sql,$result_type=MYSQL_ASSOC){
                 alert("亲！您刚刚为第四季《我是歌手》的" + baby + "投了一票！谢谢您的投票！");
                 JQuery.post("./doAction.php",{singer_name:baby,singer_votes:num},function(data){
                         //这里你可以处理获取的数据。我使用是json 格式。你也可以使用其它格式。或者为空，让它自己判断得了
-                        console.log(baby);
+                        console.log(data);
                         },'json');
             });
         });
@@ -73,8 +73,8 @@ function fetchAll($sql,$result_type=MYSQL_ASSOC){
                       <span>密码:</span>
                         <input type="text" class="password" placeholder="请输入密码" />
                   </div>
-                  <input type="submit" class="sub_btn" value="登录" /> 
-                  <div class="warnning"></div> 
+                  <input type="submit" class="sub_btn" value="登录" />
+                  <div class="warnning"></div>
               </div>
               <div class="regist_page template">
                   <div class="line">
@@ -89,10 +89,10 @@ function fetchAll($sql,$result_type=MYSQL_ASSOC){
                       <span>再次输入密码:</span>
                         <input type="text" class="repassword" placeholder="请再次输入密码" />
                   </div>
-                  <input type="submit" class="sub_btn" value="注册" />  
-                  <div class="warnning"></div> 
+                  <input type="submit" class="sub_btn" value="注册" />
+                  <div class="warnning"></div>
               </div>
-            </div>        
+            </div>
         </div>
         <div class="mask"></div>
     </div>
@@ -101,8 +101,8 @@ function fetchAll($sql,$result_type=MYSQL_ASSOC){
             <header id="topnav">
                 <nav>
                     <ul>
-                        <li><a class="scroll" href="index.html">主页</a></li>
-                        <li><a class="scroll" href="member.html">比赛选手</a></li>
+                        <li><a class="scroll" href="index.php">主页</a></li>
+                        <li><a class="scroll" href="member.php">比赛选手</a></li>
                         <li><a class="scroll" href="http://y.qq.com/topic/voice4/index.html?ADTAG=baidualdhsy"
                                target="_blank">音乐试听</a></li>
                         <li class="active"><a class="scroll" href="vote.php">为他投票</a></li>
@@ -143,7 +143,7 @@ function fetchAll($sql,$result_type=MYSQL_ASSOC){
                       <span>密码:</span>
                         <input type="text" class="password" placeholder="请输入密码" />
                   </div>
-                  <input type="submit" class="sub_btn" value="登录" />  
+                  <input type="submit" class="sub_btn" value="登录" />
               </div>
               <div class="regist_page template">
                   <div class="line">
@@ -158,9 +158,9 @@ function fetchAll($sql,$result_type=MYSQL_ASSOC){
                       <span>再次输入密码:</span>
                         <input type="text" class="repassword" placeholder="请再次输入密码" />
                   </div>
-                  <input type="submit" class="sub_btn" value="注册" />  
+                  <input type="submit" class="sub_btn" value="注册" />
               </div>
-            </div>        
+            </div>
         </div>
     </div>
     <div class="itagBox">

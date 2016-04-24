@@ -4,4 +4,12 @@ mysql_set_charset("utf8");
 mysql_select_db("vote") or die("指定数据库打开失败");
 mysql_query("set character set 'utf8'");
 mysql_query("set names 'utf8'");
+//插入数据库用的函数
+function insert($table,$array){
+  $keys=join(",",array_keys($array));
+  $vals="'".join("','",array_values($array))."'";
+  $sql="insert {$table}($keys) values({$vals})";
+  $res=mysql_query($sql);
+  return $res;
+}
  ?>
