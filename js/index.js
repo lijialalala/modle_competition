@@ -28,7 +28,7 @@ var JQuery = jQuery.noConflict();
                     {
                         duration: 500,
                         complete: function () {
-                            Jquery(this).css('top', -250)
+                            JQuery(this).css('top', -250)
                         }
                     })
             })

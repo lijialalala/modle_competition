@@ -31,7 +31,7 @@ function fetchAll($sql,$result_type=MYSQL_ASSOC){
     <title>第四季《我是歌手》投票</title>
 
     <link type="text/css" rel="stylesheet" href="css/vote.css">
-    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link type="text/css" rel="stylesheet" href="css/style.min.css">
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript">
