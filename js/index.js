@@ -19,7 +19,7 @@ var JQuery = jQuery.noConflict();
                 JQuery(this).find('a').animate({
                         'top': '0'
                     },
-                    500)
+                    500);
             },
             function () {
                 JQuery(this).find('a').animate({
@@ -28,10 +28,10 @@ var JQuery = jQuery.noConflict();
                     {
                         duration: 500,
                         complete: function () {
-                            JQuery(this).css('top', -250)
+                            JQuery(this).css('top', -250);
                         }
-                    })
-            })
+                    });
+            });
     });
     });
 var home = JQuery(".home"),
@@ -75,7 +75,7 @@ var onloadDifferentPage = function(){
             JQuery(".home,.member,.vote").removeClass("active");
             btn.addClass("active");
             JQuery("#home_page,#member_page,#vote_page").css("display","none");
-            page.css("display","block");    
+            page.css("display","block");
         });
     };
     changePage(home,homepage);
@@ -85,7 +85,7 @@ var onloadDifferentPage = function(){
             JQuery(".home,.member,.vote").removeClass("active");
             member.addClass("active");
             JQuery("#home_page,#member_page,#vote_page").css("display","none");
-            memberpage.css("display","block");   
+            memberpage.css("display","block");
         });
     });
     /*
@@ -116,15 +116,15 @@ var onloadDifferentPage = function(){
         warnning.html("");
         input_l.val("");
         input_r.val("");
-    }
+    };
     close.bind("click",closeForm);
 /**
- * 登录 
- */ 
+ * 登录
+ */
     /*输入时格式验证*/
     var loginValidate = function(){
         input_l.bind("keydown",function(){
-            warnning_l.html("");    
+            warnning_l.html("");
             if(user_l.val().length>14||user_l.val().length<4){
                 warnning_l.append("<p style='font-size:10px;color:#c83434;float:left;margin:10px auto auto 20px;'>登录失败：帐号名应为4-14长度内的！</p>");
             }
@@ -132,7 +132,7 @@ var onloadDifferentPage = function(){
                 warnning_l.append("<p style='font-size:10px;color:#c83434;float:left;margin:10px auto auto 20px;'>登录失败：密码应为为6-14长度内的！</p>");
             }
         });
-    }
+    };
     loginValidate();
     /*点击提交*/
     subbtn_l.bind("click",function(){
@@ -149,19 +149,19 @@ var onloadDifferentPage = function(){
         if( !(user_l.val()&&password_l.val()) ){
             warnning_l.append("<p style='font-size:10px;color:#c83434;float:left;margin:10px auto auto 20px;'>登录失败：所有信息都是需要填写的！</p>");
         }else{
-           closeForm(); 
+           closeForm();
         }
-        
-    }); 
+
+    });
 
 
 /**
- * 注册 
+ * 注册
  */
     /*输入时格式验证*/
     var registValidate = function(){
         input_r.bind("keydown",function(){
-            warnning_r.html("");    
+            warnning_r.html("");
             if(user_r.val().length>14||user_r.val().length<4){
                 warnning_r.append("<p style='font-size:10px;color:#c83434;float:left;margin:10px auto auto 20px;'>注册失败：帐号名应为4-14长度内的！</p>");
             }
@@ -169,7 +169,7 @@ var onloadDifferentPage = function(){
                 warnning_r.append("<p style='font-size:10px;color:#c83434;float:left;margin:10px auto auto 20px;'>注册失败：密码应为为6-14长度内的！</p>");
             }
         });
-    }
+    };
     registValidate();
     /*点击提交*/
     subbtn_r.bind("click",function(){
@@ -178,16 +178,16 @@ var onloadDifferentPage = function(){
         }else{
             //  JQuery.post("./doAction.php",{name:user_r,pwd:password_r},function(data){
             // },'json');
-            
+
             // 空表单
             if( !(user_r.val()&&password_r.val()&&repassword_r.val()) ){
                 warnning_r.append("<p style='font-size:10px;color:#c83434;float:left;margin:10px auto auto 20px;'>注册失败：所有信息都是需要填写的！</p>");
             }else{
-                closeForm();  
+                closeForm();
             }
-            
+
         }
-    }); 
-   
+    });
+
 };
 onloadDifferentPage();
