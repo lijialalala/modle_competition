@@ -125,33 +125,36 @@ var onloadDifferentPage = function(){
     var loginValidate = function(){
         input_l.bind("keydown",function(){
             warnning_l.html("");
-            if(user_l.val().length>14||user_l.val().length<4){
-                warnning_l.append("<p style='font-size:10px;color:#c83434;float:left;margin:10px auto auto 20px;'>登录失败：帐号名应为4-14长度内的！</p>");
+            if(user_l.val().trim().length!=0){
+                reg=/^[a-zA-Z]+$/;
+                if(!reg.test(user_l.val().trim()) ){
+                warnning_l.append("<p style='font-size:10px;color:#c83434;float:left;margin:10px auto auto 20px;'>*账号名应为数字获字母，不能含有符号！</p>");
+                }
             }
             if(password_l.val().length>14||password_l.val().length<6){
-                warnning_l.append("<p style='font-size:10px;color:#c83434;float:left;margin:10px auto auto 20px;'>登录失败：密码应为为6-14长度内的！</p>");
+                warnning_l.append("<p style='font-size:10px;color:#c83434;float:left;margin:10px auto auto 20px;'>*密码应为为6-14长度内的！</p>");
             }
         });
     };
     loginValidate();
     /*点击提交*/
     subbtn_l.bind("click",function(){
-        /*JQuery.post("./login.php",{loginname:user_l,loginpassword:password_l},function(data){
-           if(name!==user_l.val()){
+        warnning_l.html("");
+        //console.log(user_l.val()+""+password_l.val());
+        JQuery.post("./login.php",{loginname:user_l.val(),loginpassword:password_l.val()},function(v_name,v_pwd){
+            console.log(v_name+""+v_pwd);
+           if(v_name!==user_l.val()){
                 warnning_l.append("<p style='font-size:10px;color:#c83434;float:left;margin:10px auto auto 20px;'>登录失败：不存在这个此用户！</p>");
            }
-           if(pwd!==password_l.val()){
+           if(v_pwd!==password_l.val()){
                 warnning_l.append("<p style='font-size:10px;color:#c83434;float:left;margin:10px auto auto 20px;'>登录失败：密码输入错误！</p>");
            }
-        },'json');*/
-        JQuery.post("./doAction.php",{singer_name:user_l,singer_votes:password_l},function(data){
-                //这里你可以处理获取的数据。我使用是json 格式。你也可以使用其它格式。或者为空，让它自己判断得了
-                console.log(data);
-                },'json');
+        },'json');
+       
 
         // 空表单
         if( !(user_l.val()&&password_l.val()) ){
-            warnning_l.append("<p style='font-size:10px;color:#c83434;float:left;margin:10px auto auto 20px;'>登录失败：所有信息都是需要填写的！</p>");
+            warnning_l.append("<p style='font-size:10px;color:#c83434;float:left;margin:10px auto auto 20px;'>*所有信息都是需要填写的！</p>");
         }else{
            closeForm();
         }
@@ -166,21 +169,25 @@ var onloadDifferentPage = function(){
     var registValidate = function(){
         input_r.bind("keydown",function(){
             warnning_r.html("");
-            if(user_r.val().length>14||user_r.val().length<4){
-                warnning_r.append("<p style='font-size:10px;color:#c83434;float:left;margin:10px auto auto 20px;'>注册失败：帐号名应为4-14长度内的！</p>");
+            if(user_r.val().trim().length!=0){
+                reg=/^[a-zA-Z]+$/;
+                if(!reg.test(user_l.val().trim()) ){
+                warnning_r.append("<p style='font-size:10px;color:#c83434;float:left;margin:10px auto auto 20px;'>*账号名应为数字获字母，不能含有符号！</p>");
+                }
             }
             if(password_r.val().length>14||password_r.val().length<6){
-                warnning_r.append("<p style='font-size:10px;color:#c83434;float:left;margin:10px auto auto 20px;'>注册失败：密码应为为6-14长度内的！</p>");
+                warnning_r.append("<p style='font-size:10px;color:#c83434;float:left;margin:10px auto auto 20px;'>*密码应为为6-14长度内的！</p>");
             }
         });
     };
     registValidate();
     /*点击提交*/
     subbtn_r.bind("click",function(){
+        warnning_r.html("");
         if(repassword_r.val()!=password_r.val()){
             warnning_r.append("<p style='font-size:10px;color:#c83434;float:left;margin:10px auto auto 20px;'>注册失败：两次输入不同，请检查第二次密码输入！</p>");
         }else{
-              JQuery.post("./res.php",{name:user_r,pwd:password_r},function(data){
+              JQuery.post("./res.php",{name:user_r.val(),pwd:password_r.val()},function(data){
              },'json');
 
             // 空表单
