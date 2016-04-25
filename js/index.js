@@ -215,7 +215,16 @@ var onloadDifferentPage = function(){
 /*
  * 留言form提交 
  */
+    post_btn.bind("click",function(){
+        //获取不同form的class名中的数字 从1-7 七个表单
+        var num = JQuery(this).parent().parent().parent().attr("class").replace(/[^0-9]/ig,"");
+        console.log(num);
+        if(post_name.val()!="*Name"||post_email.val()!="*Email"||post_para.val()!="*Message"){
+            JQuery.post("",{name:post_name.val(),email:post_email.val(),para:post_para.val(),which:num},function(data){
 
+            },'json');
+        }
+    });
 
 };
     
