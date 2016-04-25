@@ -158,8 +158,10 @@ var onloadDifferentPage = function(){
         JQuery.post("./login.php",{loginname:user_l.val(),loginpassword:password_l.val()},function(data){
             console.log(data+"");
            if(data){
+             alert("登陆成功");
                 warnning_l.append("<p style='font-size:10px;color:#c83434;float:left;margin:10px auto auto 20px;'>登录成功!</p>");
            }else{
+             alert("登陆失败");
                 warnning_l.append("<p style='font-size:10px;color:#c83434;float:left;margin:10px auto auto 20px;'>登录失败：用户名不存在或者密码输入错误，请检查后重新输入！</p>");
            }
         },'json');
@@ -200,7 +202,7 @@ var onloadDifferentPage = function(){
             warnning_r.append("<p style='font-size:10px;color:#c83434;float:left;margin:10px auto auto 20px;'>注册失败：两次输入不同，请检查第二次密码输入！</p>");
         }else{
               JQuery.post("./res.php",{name:user_r.val(),password:password_r.val()},function(data){
-                
+                alert("成功注册");
              },'json');
 
             // 空表单
@@ -213,10 +215,10 @@ var onloadDifferentPage = function(){
         }
     });
 /*
- * 留言form提交 
+ * 留言form提交
  */
 
 
 };
-    
+
 onloadDifferentPage();

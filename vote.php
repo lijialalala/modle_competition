@@ -79,7 +79,7 @@ function fetchAll($sql,$result_type=MYSQL_ASSOC){
                     warnning_r.append("<p style='font-size:10px;color:#c83434;float:left;margin:10px auto auto 20px;'>注册失败：两次输入不同，请检查第二次密码输入！</p>");
                 }else{
                       JQuery.post("./res.php",{name:user_r.val(),password:password_r.val()},function(data){
-                        
+
                      },'json');
 
                     // 空表单
@@ -147,7 +147,11 @@ function fetchAll($sql,$result_type=MYSQL_ASSOC){
                                target="_blank">音乐试听</a></li>
                         <li class="active"><a class="scroll" href="vote.php">为他投票</a></li>
                         <li><a class="scroll" href="#contact">联系我们</a></li>
-                        <li><a class="scroll login_btn" href="#">注册/登录</a></li>
+												<?php if($_SESSION['username']==null){ ?>
+												<li><a class="scroll login_btn" href="#">注册/登录</a></li>
+												<?php }else{ ?>
+													<li><?php echo $_SESSION['username']; ?></li>
+													<?php } ?>
                         <div class="clear"></div>
                     </ul>
                 </nav>
