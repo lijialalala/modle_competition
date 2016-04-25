@@ -141,7 +141,7 @@ var onloadDifferentPage = function(){
     subbtn_l.bind("click",function(){
         warnning_l.html("");
         //console.log(user_l.val()+""+password_l.val());
-        JQuery.post("./login.php",{loginname:user_l.val(),loginpassword:password_l.val()},function(v_name,v_pwd){
+        /*JQuery.post("./login.php",{loginname:user_l.val(),loginpassword:password_l.val()},function(v_name,v_pwd){
             console.log(v_name+""+v_pwd);
            if(v_name!==user_l.val()){
                 warnning_l.append("<p style='font-size:10px;color:#c83434;float:left;margin:10px auto auto 20px;'>登录失败：不存在这个此用户！</p>");
@@ -149,8 +149,17 @@ var onloadDifferentPage = function(){
            if(v_pwd!==password_l.val()){
                 warnning_l.append("<p style='font-size:10px;color:#c83434;float:left;margin:10px auto auto 20px;'>登录失败：密码输入错误！</p>");
            }
+        },'json');*/
+        JQuery.post("./login.php",{loginname:user_l.val(),loginpassword:password_l.val()},function(data){
+            console.log(data+"");
+           if(data){
+              alert("登陆成功!");
+                //warnning_l.append("<p style='font-size:10px;color:#c83434;float:left;margin:10px auto auto 20px;'>登录失败：不存在这个此用户！</p>");
+           }else{
+             alert("登陆失败!");
+              // warnning_l.append("<p style='font-size:10px;color:#c83434;float:left;margin:10px auto auto 20px;'>登录失败：密码输入错误！</p>");
+           }
         },'json');
-       
 
         // 空表单
         if( !(user_l.val()&&password_l.val()) ){
@@ -187,7 +196,12 @@ var onloadDifferentPage = function(){
         if(repassword_r.val()!=password_r.val()){
             warnning_r.append("<p style='font-size:10px;color:#c83434;float:left;margin:10px auto auto 20px;'>注册失败：两次输入不同，请检查第二次密码输入！</p>");
         }else{
-              JQuery.post("./res.php",{name:user_r.val(),pwd:password_r.val()},function(data){
+              JQuery.post("./res.php",{name:user_r.val(),password:password_r.val()},function(data){
+                if(data){
+                  alert("注册成功");
+                }else{
+                  alert("注册失败");
+                }
              },'json');
 
             // 空表单

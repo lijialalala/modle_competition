@@ -1,12 +1,16 @@
 <?php
-include_once"db.php":
+include_once"db.php";
 $arr=$_POST;
-echo var_dump($arr);
-	$arr['password']=md5($_POST['userpassword']);
-	if(insert("user", $arr)){
-		//插入成功的操作
-	}else{
+	$arr['password']=md5($_POST['password']);
+	$sql='insert into user values(\''.$arr['name'].'\',\''.$arr['password'].'\')';
+	echo $sql;
+/*	$res=mysql_query($sql);
+	if($res){
+		//成功
+		return true;
+		}else{
 		//插入失败的操作
+		return false;
 	}
-
+*/
  ?>
