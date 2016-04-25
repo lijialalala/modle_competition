@@ -55,30 +55,31 @@ function fetchAll($sql,$result_type=MYSQL_ASSOC){
             /*登录点击提交*/
             subbtn_l.bind("click",function(){
                 warnning_l.html("");
-                JQuery.get("./login.php",{name,pwd},function(data){
-                   if(name!==user_l.val()){
-                        warnning_l.append("<p style='font-size:10px;color:#c83434;float:left;margin:10px auto auto 20px;'>登录失败：不存在这个此用户！</p>");
-                   }
-                   if(pwd!==password_l.val()){
-                        warnning_l.append("<p style='font-size:10px;color:#c83434;float:left;margin:10px auto auto 20px;'>登录失败：密码输入错误！</p>");
+                JQuery.post("./login.php",{loginname:user_l.val(),loginpassword:password_l.val()},function(data){
+                    console.log(data+"");
+                   if(data){
+                        warnning_l.append("<p style='font-size:10px;color:#c83434;float:left;margin:10px auto auto 20px;'>登录成功!</p>");
+                   }else{
+                        warnning_l.append("<p style='font-size:10px;color:#c83434;float:left;margin:10px auto auto 20px;'>登录失败：用户名不存在或者密码输入错误，请检查后重新输入！</p>");
                    }
                 },'json');
 
                 // 空表单
                 if( !(user_l.val()&&password_l.val()) ){
-                    warnning_l.append("<p style='font-size:10px;color:#c83434;float:left;margin:50px auto auto 20px;'>登录失败：所有信息都是需要填写的！</p>");
+                    warnning_l.append("<p style='font-size:10px;color:#c83434;float:left;margin:50px auto auto 20px;'>*所有信息都是需要填写的！</p>");
                 }else{
                    closeForm();
                 }
             });
 
             /*注册点击提交*/
-            subbtn_r.bind("click",function(){
+             subbtn_r.bind("click",function(){
                 warnning_r.html("");
                 if(repassword_r.val()!=password_r.val()){
                     warnning_r.append("<p style='font-size:10px;color:#c83434;float:left;margin:10px auto auto 20px;'>注册失败：两次输入不同，请检查第二次密码输入！</p>");
                 }else{
-                      JQuery.post("./res.php",{name:user_r,pwd:password_r},function(data){
+                      JQuery.post("./res.php",{name:user_r.val(),password:password_r.val()},function(data){
+                        
                      },'json');
 
                     // 空表单
