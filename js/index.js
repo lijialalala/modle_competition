@@ -63,7 +63,12 @@ var home = JQuery(".home"),
     password_r = JQuery(".regist_page .password"),
     repassword_r = JQuery(".regist_page .repassword"),
     line_r = JQuery(".regist_page .line"),
-    warnning_r = JQuery(".regist_page .warnning")
+    warnning_r = JQuery(".regist_page .warnning"),
+    postform1 = JQuery(".postform1"),
+    post_name = JQuery(".post_name"),
+    post_email = JQuery(".post_email"),
+    post_para = JQuery(".post_para"),
+    post_btn = JQuery(".post_btn")
     ;
 
 var onloadDifferentPage = function(){
@@ -207,6 +212,11 @@ var onloadDifferentPage = function(){
 
         }
     });
+/*
+ * 留言form提交 
+ */
+
 
 };
+    
 onloadDifferentPage();
