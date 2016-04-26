@@ -125,7 +125,7 @@ var onloadDifferentPage = function(){
  */
     /*输入时格式验证*/
     var loginValidate = function(){
-        input_l.bind("keydown",function(){
+        input_l.bind("keyup",function(){
             warnning_l.html("");
             if(user_l.val().trim().length!=0){
                 reg=/^[a-zA-Z]+$/;
@@ -144,11 +144,13 @@ var onloadDifferentPage = function(){
         warnning_l.html("");
         JQuery.post("./login.php",{loginname:user_l.val(),loginpassword:password_l.val()},function(data){
            if(data){
-             alert("登陆成功");
-                warnning_l.append("<p style='font-size:10px;color:#c83434;float:left;margin:10px auto auto 20px;'>登录成功!</p>");
+             alert("登录成功");
+             name_layout.css({
+                "lineHeight":"70px",
+                "paddingLeft":"10px"
+             })   
            }else{
-             alert("登陆失败");
-                warnning_l.append("<p style='font-size:10px;color:#c83434;float:left;margin:10px auto auto 20px;'>登录失败：用户名不存在或者密码输入错误，请检查后重新输入！</p>");
+             alert("登录失败");
            }
           location.reload(true);
         },'json');
@@ -168,7 +170,7 @@ var onloadDifferentPage = function(){
  */
     /*输入时格式验证*/
     var registValidate = function(){
-        input_r.bind("keydown",function(){
+        input_r.bind("keyup",function(){
             warnning_r.html("");
             if(user_r.val().trim().length!=0){
                 reg=/^[a-zA-Z]+$/;
