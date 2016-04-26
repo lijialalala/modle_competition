@@ -151,7 +151,7 @@ function fetchAll($sql,$result_type=MYSQL_ASSOC){
 												<?php if($_COOKIE['username']==null){ ?>
 												<li><a class="scroll login_btn" href="#">注册/登录</a></li>
 												<?php }else{ ?>
-													<li><?php echo $_COOKIE['username']; ?></li>
+													<li class="name_layout"><?php echo $_COOKIE['username']; ?></li>
 													<?php } ?>
                         <div class="clear"></div>
                     </ul>
