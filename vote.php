@@ -112,7 +112,7 @@ function fetchAll($sql,$result_type=MYSQL_ASSOC){
                   </div>
                   <div class="line">
                       <span>密码:</span>
-                        <input type="text" class="password" placeholder="请输入密码" />
+                        <input type="password" class="password" placeholder="请输入密码" />
                   </div>
                   <input type="submit" class="sub_btn" value="登录" />
                   <div class="warnning"></div>
@@ -124,11 +124,11 @@ function fetchAll($sql,$result_type=MYSQL_ASSOC){
                   </div>
                   <div class="line">
                       <span>密码:</span>
-                        <input type="text" class="password" placeholder="请输入密码" />
+                        <input type="password" class="password" placeholder="请输入密码" />
                   </div>
                   <div class="line">
                       <span>再次输入密码:</span>
-                        <input type="text" class="repassword" placeholder="请再次输入密码" />
+                        <input type="password" class="repassword" placeholder="请再次输入密码" />
                   </div>
                   <input type="submit" class="sub_btn" value="注册" />
                   <div class="warnning"></div>
@@ -373,26 +373,22 @@ function fetchAll($sql,$result_type=MYSQL_ASSOC){
                 </div>
                 <div class="clear"></div>
             </div>
-            <div class="form">
-                <h4 style="color:#fff;margin-left:5px">意见反馈</h4>
+            <form>
+                <input type="text" class="textbox" value="姓名" onFocus="this.value = '';"
+                       onBlur="if (this.value == '') {this.value = '姓名';}">
+                <input type="text" class="textbox" value="Email" onFocus="this.value = '';"
+                       onBlur="if (this.value == '') {this.value = 'Email';}">
 
-                <form method="post" action="#">
-                    <input type="text" class="textbox" value=" Name" onFocus="this.value = '';"
-                           onBlur="if (this.value == '') {this.value = 'Name';}">
-                    <input type="text" class="textbox" value="Email" onFocus="this.value = '';"
-                           onBlur="if (this.value == '') {this.value = 'Email';}">
-
-                    <div class="clear"></div>
-                    <div>
-                        <textarea value="Message:" onFocus="this.value = '';"
-                                  onBlur="if (this.value == '') {this.value = ' Message';}" style="font-family:'微软雅黑'">Message</textarea>
-                    </div>
-                    <div class="button send_button">
-                        <input type="submit" value="Send">
-                    </div>
-                    <div class="clear"></div>
-                </form>
-            </div>
+                <div class="clear"></div>
+                <div>
+                    <textarea value="Message:" onFocus="this.value = '';"
+                              onBlur="if (this.value == '') {this.value = '反馈信息';}" style="font-family:'微软雅黑'">反馈信息</textarea>
+                </div>
+                <div class="button send_button">
+                    <input type="submit" value="Send" onclick="alert("您的信息已反馈，请等待几天后的回复，谢谢！")">
+                </div>
+                <div class="clear"></div>
+            </form>
             <a class="mov-top" href="#home1"> <span> </span></a>
 
             <div class="clear"></div>

@@ -65,9 +65,7 @@ var home = JQuery(".home"),
     line_r = JQuery(".regist_page .line"),
     warnning_r = JQuery(".regist_page .warnning"),
     postform1 = JQuery(".postform1"),
-    post_name = JQuery(".post_name"),
-    post_email = JQuery(".post_email"),
-    post_para = JQuery(".post_para"),
+    name_layout = JQuery(".name_layout"),
     post_btn = JQuery(".post_btn");
 
 var onloadDifferentPage = function(){
@@ -210,8 +208,11 @@ var onloadDifferentPage = function(){
         //获取不同form的class名中的数字 从1-7 七个表单
 
         event.preventDefault();
-        var num = JQuery(this).parent().parent().parent().attr("class").replace(/[^0-9]/ig,"");
-        if(post_para.val()!="*Message"){
+        var parent = JQuery(this).parent().parent().parent();
+        var num = parent.attr("class").replace(/[^0-9]/ig,"");
+        var post_para = parent.find(".post_para");
+        console.log(post_para.val());
+        if(post_para.val()!="留言区(用户需注册登录后才能留言哦)"){
             JQuery.post("./leaveMessage.php",{para:post_para.val(),which:num},function(data){
               alert("插入成功");
               location.reload(true);
