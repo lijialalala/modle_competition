@@ -234,8 +234,8 @@ require_once"db.php";
                                                         <?php
                                                         $rows=getRows(1);
                                                         $num=getNumber(1);
-                                                       echo var_dump($rows);
-                                                        foreach ($rows as  $value) {
+                                                        for ($i=0;$i<$num;$i++) {
+                                                          echo $rows[$i];
                                                          ?>
                                                         <div class="c_grid">
                                                             <div class="person_1">
@@ -243,11 +243,11 @@ require_once"db.php";
                                                             </div>
                                                             <div class="desc">
                                                                 <div class="c_sub_grid">
-                                                                    <p><a href="#"><?php echo $value['name'];echo $value['time']; ?></a></p>
+                                                                    <p><a href="#"><?php echo $rows[$i]['name'];echo $rows[$i]['time']; ?></a></p>
                                                                     <div class="clear"></div>
                                                                 </div>
                                                                 <div class="para">
-                                                                    <?php echo $value[1]; ?>
+                                                                    <?php echo $rows[$i]['message']; ?>
                                                                 </div>
                                                               </div>
                                                               <div class="clear"></div>

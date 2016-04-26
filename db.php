@@ -18,4 +18,10 @@ function getRows($did){
   $rows=mysql_fetch_array($res);
   return $rows;
 }
+function getNumber($did){
+  $sql="select * from message where did=".$did;
+  $res=mysql_query($sql);
+  $num=mysql_num_rows($res);
+  return $num;
+}
  ?>
