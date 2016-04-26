@@ -233,10 +233,9 @@ require_once"db.php";
                                                         <h4>评论</h4>
                                                         <?php
                                                         $rows=getRows(1);
+                                                        $num=getNumber(1);
                                                        echo var_dump($rows);
                                                         foreach ($rows as  $value) {
-                                                          # code...
-                                                          echo $value[1];
                                                          ?>
                                                         <div class="c_grid">
                                                             <div class="person_1">
@@ -248,7 +247,7 @@ require_once"db.php";
                                                                     <div class="clear"></div>
                                                                 </div>
                                                                 <div class="para">
-                                                                    <?php// echo $value[1]; ?>
+                                                                    <?php echo $value[1]; ?>
                                                                 </div>
                                                               </div>
                                                               <div class="clear"></div>
