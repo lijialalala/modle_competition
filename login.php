@@ -3,7 +3,7 @@ include_once"db.php";
 $arr=$_POST;
 //假设能接收值
 
-$name=$arr[loginname];
+$name=$arr['loginname'];
 
 //md5加密
 $password=md5($arr[loginpassword]);

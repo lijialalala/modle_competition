@@ -67,7 +67,7 @@
                             <?php if($_SESSION['username']==""&&$_COOKIE['username']==""){ ?>
                             <li><a class="scroll login_btn" href="#">注册/登录</a></li>
                             <?php }else{ ?>
-                              <li><?php if($_SESSION['username']){echo $_SESSION['username'];}else{echo $_COOKIE['username'];} ?></li>
+                              <li><?php echo $_COOKIE['username']; ?></li>
                               <?php } ?>
                             <div class="clear"></div>
                         </ul>

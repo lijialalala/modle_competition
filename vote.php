@@ -1,4 +1,5 @@
 <?php
+require_once"db.php";
 function fetchAll($sql,$result_type=MYSQL_ASSOC){
 	$result=mysql_query($sql);
 	while(@$row=mysql_fetch_array($result,$result_type)){
@@ -147,10 +148,10 @@ function fetchAll($sql,$result_type=MYSQL_ASSOC){
                                target="_blank">音乐试听</a></li>
                         <li class="active"><a class="scroll" href="vote.php">为他投票</a></li>
                         <li><a class="scroll" href="#contact">联系我们</a></li>
-												<?php if($_SESSION['username']==null){ ?>
+												<?php if($_COOKIE['username']==null){ ?>
 												<li><a class="scroll login_btn" href="#">注册/登录</a></li>
 												<?php }else{ ?>
-													<li><span class="scroll"><?php echo $_SESSION['username']; ?></span></li>
+													<li><?php echo $_COOKIE['username']; ?></li>
 													<?php } ?>
                         <div class="clear"></div>
                     </ul>
