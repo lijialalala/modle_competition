@@ -14,8 +14,10 @@ function insert($table,$array){
 }
 function getRows($did){
   $sql="select * from message where did=".$did;
-  $res=mysql_query($sql);
-  $rows=mysql_fetch_array($res);
+  $result=mysql_query($sql);
+  while(@$row=mysql_fetch_array($result,$result_type)){
+    $rows[]=$row;
+  }
   return $rows;
 }
 function getNumber($did){

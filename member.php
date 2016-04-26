@@ -81,7 +81,7 @@ require_once"db.php";
                             <?php if($_COOKIE['username']==null){ ?>
                             <li><a class="scroll login_btn" href="#">注册/登录</a></li>
                             <?php }else{ ?>
-                              <li class="name_layout"><?php echo $_COOKIE['username']; ?></li>
+                              <li style="line-height:70px;padding-left:10px;"><?php echo $_COOKIE['username']; ?></li>
                               <?php } ?>
                             <div class="clear"></div>
                         </ul>
@@ -234,8 +234,9 @@ require_once"db.php";
                                                         <?php
                                                         $rows=getRows(1);
                                                         $num=getNumber(1);
+                                                        echo var_dump($rows);
                                                         for ($i=0;$i<$num;$i++) {
-                                                          echo $rows[$i];
+                                                          echo var_dump($rows[$i]);
                                                          ?>
                                                         <div class="c_grid">
                                                             <div class="person_1">
