@@ -1,13 +1,14 @@
 <?php
-include_once"db.php":
+include_once"db.php";
+$sql="select * from user where username=".$_SESSION['username'];
+$res=mysql_query($sql);
+$rows=mysql_fetch_assoc($res);
 $arr=$_POST;
+$arr['time']=Time();
 echo var_dump($arr);
-	if(insert("message", $arr)){
-		//插入成功的操作
-	}else{
-		//插入失败的操作
-	}
-	return $mes;
-
+$sql='insert into message values(null\''.$arr['para'].'\','.time().','.$arr['which'].',\''.$rows['username'].'\')';
+echo $sql;
+//mysql_query($sql);
+//echo ture;
 
  ?>

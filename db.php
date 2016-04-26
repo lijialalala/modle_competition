@@ -4,7 +4,6 @@ mysql_set_charset("utf8");
 mysql_select_db("vote") or die("指定数据库打开失败");
 mysql_query("set character set 'utf8'");
 mysql_query("set names 'utf8'");
-session_start();
 //插入数据库用的函数
 function insert($table,$array){
   $keys=join(",",array_keys($array));
@@ -12,5 +11,11 @@ function insert($table,$array){
   $sql="insert {$table}($keys) values({$vals})";
   $res=mysql_query($sql);
   return $res;
+}
+function getRows($did){
+  $sql="select * from message where did=".$did;
+  $res=mysql_query($sql);
+  $rows=mysql_fetch_array($res);
+  return $rows;
 }
  ?>

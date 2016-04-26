@@ -1,4 +1,3 @@
-<?php echo $SESSION['username']; ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -65,10 +64,10 @@
                                    target="_blank">音乐试听</a></li>
                             <li><a class="scroll vote" href="vote.php">为他投票</a></li>
                             <li><a class="scroll" href="#contact">联系我们</a></li>
-                            <?php if($_SESSION['username']==null){ ?>
+                            <?php if($_SESSION['username']==""&&$_COOKIE['username']==""){ ?>
                             <li><a class="scroll login_btn" href="#">注册/登录</a></li>
                             <?php }else{ ?>
-                              <li><?php echo $_SESSION['username']; ?></li>
+                              <li><?php if($_SESSION['username']){echo $_SESSION['username'];}else{echo $_COOKIE['username'];} ?></li>
                               <?php } ?>
                             <div class="clear"></div>
                         </ul>

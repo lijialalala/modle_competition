@@ -68,8 +68,7 @@ var home = JQuery(".home"),
     post_name = JQuery(".post_name"),
     post_email = JQuery(".post_email"),
     post_para = JQuery(".post_para"),
-    post_btn = JQuery(".post_btn")
-    ;
+    post_btn = JQuery(".post_btn");
 
 var onloadDifferentPage = function(){
     /*
@@ -145,18 +144,7 @@ var onloadDifferentPage = function(){
     /*点击提交*/
     subbtn_l.bind("click",function(){
         warnning_l.html("");
-        //console.log(user_l.val()+""+password_l.val());
-        /*JQuery.post("./login.php",{loginname:user_l.val(),loginpassword:password_l.val()},function(v_name,v_pwd){
-            console.log(v_name+""+v_pwd);
-           if(v_name!==user_l.val()){
-                warnning_l.append("<p style='font-size:10px;color:#c83434;float:left;margin:10px auto auto 20px;'>登录失败：不存在这个此用户！</p>");
-           }
-           if(v_pwd!==password_l.val()){
-                warnning_l.append("<p style='font-size:10px;color:#c83434;float:left;margin:10px auto auto 20px;'>登录失败：密码输入错误！</p>");
-           }
-        },'json');*/
         JQuery.post("./login.php",{loginname:user_l.val(),loginpassword:password_l.val()},function(data){
-            console.log(data+"");
            if(data){
              alert("登陆成功");
                 warnning_l.append("<p style='font-size:10px;color:#c83434;float:left;margin:10px auto auto 20px;'>登录成功!</p>");
@@ -164,6 +152,7 @@ var onloadDifferentPage = function(){
              alert("登陆失败");
                 warnning_l.append("<p style='font-size:10px;color:#c83434;float:left;margin:10px auto auto 20px;'>登录失败：用户名不存在或者密码输入错误，请检查后重新输入！</p>");
            }
+          location.reload(true);
         },'json');
 
         // 空表单
@@ -219,11 +208,13 @@ var onloadDifferentPage = function(){
  */
     post_btn.bind("click",function(){
         //获取不同form的class名中的数字 从1-7 七个表单
+        event.preventDefault();
         var num = JQuery(this).parent().parent().parent().attr("class").replace(/[^0-9]/ig,"");
-        console.log(num);
-        if(post_name.val()!="*Name"||post_email.val()!="*Email"||post_para.val()!="*Message"){
-            JQuery.post("",{name:post_name.val(),email:post_email.val(),para:post_para.val(),which:num},function(data){
 
+        if(post_name.val()!="*Name"&post_email.val()!="*Email"&&post_para.val()!="*Message"){
+            JQuery.post("./leaveMessage.php",{name:post_name.val(),email:post_email.val(),para:post_para.val(),which:num},function(data){
+              alert("插入成功");
+              location.reload(true);
             },'json');
         }
     });

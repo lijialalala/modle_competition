@@ -150,7 +150,7 @@ function fetchAll($sql,$result_type=MYSQL_ASSOC){
 												<?php if($_SESSION['username']==null){ ?>
 												<li><a class="scroll login_btn" href="#">注册/登录</a></li>
 												<?php }else{ ?>
-													<li><?php echo $_SESSION['username']; ?></li>
+													<li><span class="scroll"><?php echo $_SESSION['username']; ?></span></li>
 													<?php } ?>
                         <div class="clear"></div>
                     </ul>

@@ -1,3 +1,6 @@
+<?php
+require_once"db.php";
+ ?>
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 
@@ -69,7 +72,7 @@
                 <header id="topnav">
                     <nav>
                         <ul>
-                            <li class="home"><a class="scroll" href="index.html">主页</a></li>
+                            <li class="home"><a class="scroll" href="index.php">主页</a></li>
                             <li class="active member"><a class="scroll" href="#">比赛选手</a></li>
                             <li><a class="scroll" href="http://www.mgtv.com/v/2016/wsgs4/?f=bdpz"
                                    target="_blank">音乐试听</a></li>
@@ -228,51 +231,45 @@
                                                     </div>
                                                     <div class="comments">
                                                         <h4>评论</h4>
-
+                                                        <?php
+                                                        $rows=getRows(1);
+                                                       echo var_dump($rows);
+                                                        foreach ($rows as  $value) {
+                                                          # code...
+                                                          echo $value[1];
+                                                         ?>
                                                         <div class="c_grid">
                                                             <div class="person_1">
                                                                 <a href="#"><span> </span></a>
                                                             </div>
                                                             <div class="desc">
                                                                 <div class="c_sub_grid">
-                                                                    <p><a href="#">almodove,(22级) 2015-07-21 21:34  亮了(1) </a></p>
-                                                                    <h6><a href="#">立即回复</a></h6>
-
+                                                                    <p><a href="#"><?php echo $value['name'];echo $value['time']; ?></a></p>
                                                                     <div class="clear"></div>
                                                                 </div>
                                                                 <div class="para">
-                                                                    <p>
-                                                                      他说的感情更侧重那种情感感染力吧。李克勤自己都说过有次他听张国荣的歌，突然觉得技巧功底没有以前认为的那么重要，重要的个人情感的特色表达。原话记不清，大概意思不走样。
-                                                                    </p>
-                                                                    <p>
-                                                                      但是情感特色这东西真是后天没辙补的，听李克勤的歌就觉得情感世界不丰富，很单薄，林志炫，孙楠这些个人觉得都这类。是，一生不变这种真的很好，可是所有歌加起来那种情感感染力反正我也觉得稍显乏味。一个反例是林子祥，他唱歌貌似类型单调，但惊艳感处理总是不期而至。
-                                                                    </p>
-                                                                    <p>
-                                                                      张国荣和李克勤大概最典型的两种类型代表。
-                                                                    </p>
+                                                                    <?php// echo $value[1]; ?>
                                                                 </div>
                                                               </div>
                                                               <div class="clear"></div>
                                                           </div>
+                                                          <?php } ?>
                                                       </div>
                                                     <div class="comments-area">
                                                         <h4>留言</h4>
 
                                                         <form  class="postform1">
                                                             <p>
-                                                                <input type="text" value="*Name" onFocus="this.value = '';"
-                                                                       onBlur="if (this.value == '') {this.value = '*Name';}">
+                                                                <input type="text" value="*Name" class="post_name" placeholder="*Name">
                                                             </p>
 
                                                             <p>
-                                                                <input type="text" value="*Email" onFocus="this.value = '';"
-                                                                       onBlur="if (this.value == '') {this.value = '*Email';}">
+                                                                <input type="text" value="*Email" class="post_email" placeholder="*Email">
                                                             </p>
 
                                                             <div class="clear"></div>
                                                             <div class="text_area post_para">
-                                                                <textarea onFocus="if(this.value == '*Message') this.value='';"
-                                                                          onBlur="if(this.value == '') this.value='*Message';">*Message</textarea>
+                                                                <textarea>*Message</textarea>
                                                             </div>
                                                             <div>
                                                                 <div class="button send_button">
@@ -520,19 +517,16 @@
 
                                                         <form  class="postform2">
                                                             <p>
-                                                                <input type="text" value="*Name" onFocus="this.value = '';"
-                                                                       onBlur="if (this.value == '') {this.value = '*Name';}">
+                                                                <input type="text" value="" class="post_name" placeholder="*Name">
                                                             </p>
 
                                                             <p>
-                                                                <input type="text" value="*Email" onFocus="this.value = '';"
-                                                                       onBlur="if (this.value == '') {this.value = '*Email';}">
+                                                                <input type="text" value="*Email" class="post_email" placeholder="*Email">
                                                             </p>
 
                                                             <div class="clear"></div>
                                                             <div class="text_area post_para">
-                                                                <textarea onFocus="if(this.value == '*Message') this.value='';"
-                                                                          onBlur="if(this.value == '') this.value='*Message';">*Message</textarea>
+                                                                <textarea placeholder="*Message"></textarea>
                                                             </div>
                                                             <div>
                                                                 <div class="button send_button">
@@ -756,19 +750,16 @@
                                                         <h4>留言</h4>
                                                         <form  class="postform3">
                                                             <p>
-                                                                <input type="text" value="*Name" onFocus="this.value = '';"
-                                                                       onBlur="if (this.value == '') {this.value = '*Name';}">
+                                                                <input type="text" value="*Name" class="post_name" placeholder="*Name">
                                                             </p>
 
                                                             <p>
-                                                                <input type="text" value="*Email" onFocus="this.value = '';"
-                                                                       onBlur="if (this.value == '') {this.value = '*Email';}">
+                                                                <input type="text" value="*Email" class="post_email" placeholder="*Email">
                                                             </p>
 
                                                             <div class="clear"></div>
                                                             <div class="text_area post_para">
-                                                                <textarea onFocus="if(this.value == '*Message') this.value='';"
-                                                                          onBlur="if(this.value == '') this.value='*Message';">*Message</textarea>
+                                                                <textarea>*Message</textarea>
                                                             </div>
                                                             <div>
                                                                 <div class="button send_button">
@@ -1009,19 +1000,16 @@
 
                                                         <form  class="postform4">
                                                             <p>
-                                                                <input type="text" value="*Name" onFocus="this.value = '';"
-                                                                       onBlur="if (this.value == '') {this.value = '*Name';}">
+                                                                <input type="text" value="*Name" class="post_name" placeholder="*Name">
                                                             </p>
 
                                                             <p>
-                                                                <input type="text" value="*Email" onFocus="this.value = '';"
-                                                                       onBlur="if (this.value == '') {this.value = '*Email';}">
+                                                                <input type="text" value="*Email" class="post_email" placeholder="*Email">
                                                             </p>
 
                                                             <div class="clear"></div>
                                                             <div class="text_area post_para">
-                                                                <textarea onFocus="if(this.value == '*Message') this.value='';"
-                                                                          onBlur="if(this.value == '') this.value='*Message';">*Message</textarea>
+                                                                <textarea>*Message</textarea>
                                                             </div>
                                                             <div>
                                                                 <div class="button send_button">
@@ -1265,19 +1253,16 @@
 
                                                         <form  class="postform5">
                                                             <p>
-                                                                <input type="text" value="*Name" onFocus="this.value = '';"
-                                                                       onBlur="if (this.value == '') {this.value = '*Name';}">
+                                                                <input type="text" value="*Name" class="post_name" placeholder="*Name">
                                                             </p>
 
                                                             <p>
-                                                                <input type="text" value="*Email" onFocus="this.value = '';"
-                                                                       onBlur="if (this.value == '') {this.value = '*Email';}">
+                                                                <input type="text" value="*Email" class="post_email" placeholder="*Email">
                                                             </p>
 
                                                             <div class="clear"></div>
                                                             <div class="text_area post_para">
-                                                                <textarea onFocus="if(this.value == '*Message') this.value='';"
-                                                                          onBlur="if(this.value == '') this.value='*Message';">*Message</textarea>
+                                                                <textarea>*Message</textarea>
                                                             </div>
                                                             <div>
                                                                 <div class="button send_button">
@@ -1525,19 +1510,16 @@
 
                                                         <form  class="postform6">
                                                             <p>
-                                                                <input type="text" value="*Name" onFocus="this.value = '';"
-                                                                       onBlur="if (this.value == '') {this.value = '*Name';}">
+                                                                <input type="text" value="*Name" class="post_name" placeholder="*Name">
                                                             </p>
 
                                                             <p>
-                                                                <input type="text" value="*Email" onFocus="this.value = '';"
-                                                                       onBlur="if (this.value == '') {this.value = '*Email';}">
+                                                                <input type="text" value="*Email" class="post_email" placeholder="*Email">
                                                             </p>
 
                                                             <div class="clear"></div>
                                                             <div class="text_area post_para">
-                                                                <textarea onFocus="if(this.value == '*Message') this.value='';"
-                                                                          onBlur="if(this.value == '') this.value='*Message';">*Message</textarea>
+                                                                <textarea>*Message</textarea>
                                                             </div>
                                                             <div>
                                                                 <div class="button send_button">
@@ -1767,19 +1749,16 @@
 
                                                         <form  class="postform7">
                                                             <p>
-                                                                <input type="text" value="*Name" onFocus="this.value = '';"
-                                                                       onBlur="if (this.value == '') {this.value = '*Name';}">
+                                                                <input type="text" value="*Name" class="post_name" placeholder="*Name">
                                                             </p>
 
                                                             <p>
-                                                                <input type="text" value="*Email" onFocus="this.value = '';"
-                                                                       onBlur="if (this.value == '') {this.value = '*Email';}">
+                                                                <input type="text" value="*Email" class="post_email" placeholder="*Email">
                                                             </p>
 
                                                             <div class="clear"></div>
                                                             <div class="text_area post_para">
-                                                                <textarea onFocus="if(this.value == '*Message') this.value='';"
-                                                                          onBlur="if(this.value == '') this.value='*Message';">*Message</textarea>
+                                                                <textarea>*Message</textarea>
                                                             </div>
                                                             <div>
                                                                 <div class="button send_button">
