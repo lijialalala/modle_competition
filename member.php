@@ -234,9 +234,9 @@ require_once"db.php";
                                                         <?php
                                                         $rows=getRows(1);
                                                         $num=getNumber(1);
-                                                        echo var_dump($rows);
+                                                        //echo var_dump($rows);
                                                         for ($i=0;$i<$num;$i++) {
-                                                          echo var_dump($rows[$i]);
+                                                          // var_dump($rows[$i]);
                                                          ?>
                                                         <div class="c_grid">
                                                             <div class="person_1">
@@ -494,24 +494,29 @@ require_once"db.php";
                                                     </div>
                                                     <div class="comments">
                                                         <h4>评论</h4>
-
+                                                        <?php
+                                                        $rows=getRows(２);
+                                                        $num=getNumber(２);
+                                                        //echo var_dump($rows);
+                                                        for ($i=0;$i<$num;$i++) {
+                                                          // var_dump($rows[$i]);
+                                                         ?>
                                                         <div class="c_grid">
                                                             <div class="person_1">
                                                                 <a href="#"><span> </span></a>
                                                             </div>
                                                             <div class="desc">
                                                                 <div class="c_sub_grid">
-                                                                    <p><a href="#">橘子味吖_ | 二级 </a></p>
-                                                                    <h6><a href="#">立即回复</a></h6>
-
+                                                                    <p><a href="#"><?php echo $rows[$i]['name'];echo $rows[$i]['time']; ?></a></p>
                                                                     <div class="clear"></div>
                                                                 </div>
                                                                 <div class="para">
-                                                                    <p>其实在微博上发起的各种投票，类似下一场最期待的歌手或者是最喜欢谁的表演这样的投票，黄致列基本都是能占所有票数的的一半，现在的观众就喜欢有颜会唱会跳的综艺感强的，这也是他所吸引人的原因</p>
+                                                                    <?php echo $rows[$i]['message']; ?>
                                                                 </div>
-                                                            </div>
-                                                            <div class="clear"></div>
-                                                        </div>
+                                                              </div>
+                                                              <div class="clear"></div>
+                                                          </div>
+                                                          <?php } ?>
                                                     </div>
                                                     <div class="comments-area">
                                                         <h4>留言</h4>
@@ -727,26 +732,29 @@ require_once"db.php";
                                                     </div>
                                                     <div class="comments">
                                                         <h4>评论</h4>
-
+                                                        <?php
+                                                        $rows=getRows(３);
+                                                        $num=getNumber(３);
+                                                        //echo var_dump($rows);
+                                                        for ($i=0;$i<$num;$i++) {
+                                                          // var_dump($rows[$i]);
+                                                         ?>
                                                         <div class="c_grid">
                                                             <div class="person_1">
                                                                 <a href="#"><span> </span></a>
                                                             </div>
                                                             <div class="desc">
                                                                 <div class="c_sub_grid">
-                                                                    <p><a href="#">Waring,4 Oct 2015 </a></p>
-                                                                    <h6><a href="#">立即回复</a></h6>
-
+                                                                    <p><a href="#"><?php echo $rows[$i]['name'];echo $rows[$i]['time']; ?></a></p>
                                                                     <div class="clear"></div>
                                                                 </div>
                                                                 <div class="para">
-                                                                    <p>
-                                                                      徐佳莹的专辑一向以个人创作为基底，无论古灵精怪的快歌或是动人心弦的情歌都在呈现她多面向的独特个性，常天马行空地提出一些有趣的创意生活（中国广播网评）。对于一个有要求的实力派来说，做出令自己和听者满意的音乐已经成功，徐佳莹用作品书写自己歌坛人生，她的用心良苦和令人回味的表演以及有目的的编排让我们看到一个女孩成长成熟和成功的路程（网易娱乐评）。
-                                                                    </p>
+                                                                    <?php echo $rows[$i]['message']; ?>
                                                                 </div>
-                                                            </div>
-                                                            <div class="clear"></div>
-                                                        </div>
+                                                              </div>
+                                                              <div class="clear"></div>
+                                                          </div>
+                                                          <?php } ?>
                                                     </div>
                                                     <div class="comments-area">
                                                         <h4>留言</h4>
@@ -961,42 +969,29 @@ require_once"db.php";
                                                     </div>
                                                     <div class="comments">
                                                         <h4>评论</h4>
-
+                                                        <?php
+                                                        $rows=getRows(４);
+                                                        $num=getNumber(４);
+                                                        //echo var_dump($rows);
+                                                        for ($i=0;$i<$num;$i++) {
+                                                          // var_dump($rows[$i]);
+                                                         ?>
                                                         <div class="c_grid">
                                                             <div class="person_1">
                                                                 <a href="#"><span> </span></a>
                                                             </div>
                                                             <div class="desc">
                                                                 <div class="c_sub_grid">
-                                                                    <p><a href="#">小_老_肥 (25级) 2015-02-13 21:52   亮了</a></p>
-                                                                    <h6><a href="#">立即回复</a></h6>
-
+                                                                    <p><a href="#"><?php echo $rows[$i]['name'];echo $rows[$i]['time']; ?></a></p>
                                                                     <div class="clear"></div>
                                                                 </div>
                                                                 <div class="para">
-                                                                    <p>十多年的张信哲歌迷表示，老张年轻时唱功好红极一时上不假，但是近几年唱功退化厉害，不适合参加这种硬碰硬的比赛，此外，老张真正的兴趣不在唱歌，唱歌只是他的职业兴趣是古董收藏，他性格淡然、没有歌唱事业企图心.</p>
+                                                                    <?php echo $rows[$i]['message']; ?>
                                                                 </div>
-                                                            </div>
-                                                            <div class="clear"></div>
-                                                        </div>
-                                                        <div class="c_grid">
-                                                            <div class="person_1">
-                                                                <a href="#"><span> </span></a>
-                                                            </div>
-                                                            <div class="desc">
-                                                                <div class="c_sub_grid">
-                                                                    <p><a href="#">xiangyinyiyi (38级) 2015-02-13 23:03   亮了</a></p>
-                                                                    <h6><a href="#">立即回复</a></h6>
-
-                                                                    <div class="clear"></div>
-                                                                </div>
-                                                                <div class="para">
-                                                                    <p>一个时代会涌现出一大批歌手，而这一大批歌手里会涌现出少数几个歌手，进行打擂台。香港，谭咏麟、张国荣对擂。台湾:王杰、齐秦对擂、张雨生、张信哲对擂。（另，说张信哲现在不红的，绝对是低幼儿童。一个时代有一个时代的代表人物。张信哲专注音乐，不抛头露面，红不红已经不是功成名就的歌手要考量的了）</p>
-                                                                </div>
-                                                            </div>
-                                                            <div class="clear"></div>
-                                                        </div>
-
+                                                              </div>
+                                                              <div class="clear"></div>
+                                                          </div>
+                                                          <?php } ?>
                                                     </div>
                                                     <div class="comments-area">
                                                         <h4>留言</h4>
@@ -1215,41 +1210,29 @@ require_once"db.php";
                                                     </div>
                                                     <div class="comments">
                                                         <h4>评论</h4>
-
+                                                        <?php
+                                                        $rows=getRows(５);
+                                                        $num=getNumber(５);
+                                                        //echo var_dump($rows);
+                                                        for ($i=0;$i<$num;$i++) {
+                                                          // var_dump($rows[$i]);
+                                                         ?>
                                                         <div class="c_grid">
                                                             <div class="person_1">
                                                                 <a href="#"><span> </span></a>
                                                             </div>
                                                             <div class="desc">
                                                                 <div class="c_sub_grid">
-                                                                    <p><a href="#">Waring,10 Sep 2015 </a></p>
-                                                                    <h6><a href="#">立即回复</a></h6>
-
+                                                                    <p><a href="#"><?php echo $rows[$i]['name'];echo $rows[$i]['time']; ?></a></p>
                                                                     <div class="clear"></div>
                                                                 </div>
                                                                 <div class="para">
-                                                                    <p>容祖儿的最佳音域是偏高音的区域，这形成了她异于同时代港乐女歌手那种独特的清亮音色；声质感缥缈却稳定，真假声转换行云流水，高音可以唱到G5，更难 得是作为唱跳歌手，跳完全场仍面不改色，声音坚挺；以唱功实力、销量成绩、经典数量，以及市场影响力，在香港乐坛占据不可逾越的地位。</p>
+                                                                    <?php echo $rows[$i]['message']; ?>
                                                                 </div>
-                                                            </div>
-                                                            <div class="clear"></div>
-                                                        </div>
-                                                        <div class="c_grid">
-                                                            <div class="person_1">
-                                                                <a href="#"><span> </span></a>
-                                                            </div>
-                                                            <div class="desc">
-                                                                <div class="c_sub_grid">
-                                                                    <p><a href="#">Alern,10 Sep 2015 </a></p>
-                                                                    <h6><a href="#">立即回复</a></h6>
-
-                                                                    <div class="clear"></div>
-                                                                </div>
-                                                                <div class="para">
-                                                                    <p>容祖儿不算美女，身材也只能用瘦来形容；刚出道那些年，容祖儿有过其他同 行从未经历过的暴风骤雨式的批评，从外形一直被骂到家庭背景，容祖儿最大的优点是心理素质强大，什么事情都能一笑置之；容祖儿很勤奋，创造出100%出勤 率及零请假的佳绩；在骂声中从容成长的容祖儿变得越来越有自信，一首《挥着翅膀的女孩》成功打入春晚，并连续四年献唱，创香港歌手演出春晚的纪录。</p>
-                                                                </div>
-                                                            </div>
-                                                            <div class="clear"></div>
-                                                        </div>
+                                                              </div>
+                                                              <div class="clear"></div>
+                                                          </div>
+                                                          <?php } ?>
 
                                                     </div>
                                                     <div class="comments-area">
@@ -1473,41 +1456,29 @@ require_once"db.php";
                                                     </div>
                                                     <div class="comments">
                                                         <h4>评论</h4>
-
+                                                        <?php
+                                                        $rows=getRows(６);
+                                                        $num=getNumber(６);
+                                                        //echo var_dump($rows);
+                                                        for ($i=0;$i<$num;$i++) {
+                                                          // var_dump($rows[$i]);
+                                                         ?>
                                                         <div class="c_grid">
                                                             <div class="person_1">
                                                                 <a href="#"><span> </span></a>
                                                             </div>
                                                             <div class="desc">
                                                                 <div class="c_sub_grid">
-                                                                    <p><a href="#">Waring,2 Nov 2015 </a></p>
-                                                                    <h6><a href="#">立即回复</a></h6>
-
+                                                                    <p><a href="#"><?php echo $rows[$i]['name'];echo $rows[$i]['time']; ?></a></p>
                                                                     <div class="clear"></div>
                                                                 </div>
                                                                 <div class="para">
-                                                                    <p>李玟是第一位在美国歌坛出道的华裔歌手，并被时代杂志评价为“华人之光”。凭着扣人心弦的歌声、天赋的节奏感和自然的表演才华，李玟在华人流行乐坛取得了一定的成就，被誉为“亚洲的Mariah Carey”。（Rolling Stone评价）。</p>
+                                                                    <?php echo $rows[$i]['message']; ?>
                                                                 </div>
-                                                            </div>
-                                                            <div class="clear"></div>
-                                                        </div>
-                                                        <div class="c_grid">
-                                                            <div class="person_1">
-                                                                <a href="#"><span> </span></a>
-                                                            </div>
-                                                            <div class="desc">
-                                                                <div class="c_sub_grid">
-                                                                    <p><a href="#">Alern,10 Sep 2015 </a></p>
-                                                                    <h6><a href="#">立即回复</a></h6>
-
-                                                                    <div class="clear"></div>
-                                                                </div>
-                                                                <div class="para">
-                                                                    <p>她拥有性感和甜蜜的外形（台湾版GQ评价），还有优美高音与唱腔，音域、音色和英文歌的腔调都丰美地道，而且她声音中略带淘气的节奏感。</p>
-                                                                </div>
-                                                            </div>
-                                                            <div class="clear"></div>
-                                                        </div>
+                                                              </div>
+                                                              <div class="clear"></div>
+                                                          </div>
+                                                          <?php } ?>
 
                                                     </div>
                                                     <div class="comments-area">
@@ -1731,24 +1702,29 @@ require_once"db.php";
                                                     </div>
                                                     <div class="comments">
                                                         <h4>评论</h4>
-
+                                                        <?php
+                                                        $rows=getRows(７);
+                                                        $num=getNumber(７);
+                                                        //echo var_dump($rows);
+                                                        for ($i=0;$i<$num;$i++) {
+                                                          // var_dump($rows[$i]);
+                                                         ?>
                                                         <div class="c_grid">
                                                             <div class="person_1">
                                                                 <a href="#"><span> </span></a>
                                                             </div>
                                                             <div class="desc">
                                                                 <div class="c_sub_grid">
-                                                                    <p><a href="#">Waring,2 Nov 2016 </a></p>
-                                                                    <h6><a href="#">立即回复</a></h6>
-
+                                                                    <p><a href="#"><?php echo $rows[$i]['name'];echo $rows[$i]['time']; ?></a></p>
                                                                     <div class="clear"></div>
                                                                 </div>
                                                                 <div class="para">
-                                                                    <p>老狼虽然多年来一直保持并不频繁的发片量，但每张片的品质都受到业界的一致肯定。他的作品虽然不是很多但每首都被广为传唱，正因为这些，他一直在自己的音乐道路上稳步发展，坚持自己的风格也从未走出人们的视线。尽管老狼认为“校园民谣”对于他本身来说，更多时候只是一个标签，但他无疑已经永远地和这个标签联系在一起了。上世纪90年代中期，《同桌的你》因为一场意外的大学生 毕业晚会而瞬间红遍全国。著名小资作家安妮宝贝多年后曾气愤地说，老狼最好听的歌根本不是《同桌的你》，而是《青春无悔》。但无论是《同桌的你》还是《青春无悔》，老狼都以迥异于当时流行音乐充满商业味道的歌词和配曲，和低沉沧桑的诗情演绎，迅速攫取了当时年青一代的心。（成都日报评）。</p>
+                                                                    <?php echo $rows[$i]['message']; ?>
                                                                 </div>
-                                                            </div>
-                                                            <div class="clear"></div>
-                                                        </div>
+                                                              </div>
+                                                              <div class="clear"></div>
+                                                          </div>
+                                                          <?php } ?>
                                                     </div>
                                                     <div class="comments-area">
                                                         <h4>留言</h4>
