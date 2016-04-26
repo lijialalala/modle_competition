@@ -479,8 +479,8 @@
                                                         </p>
 
                                                         <div class="clear"></div> -->
-                                                        <div class="text_area post_para">
-                                                            <textarea onFocus="if(this.value == '留言区(用户需注册登录后才能留言哦)') this.value='';"
+                                                        <div class="text_area">
+                                                            <textarea class="post_para" onFocus="if(this.value == '留言区(用户需注册登录后才能留言哦)') this.value='';"
                                                                       onBlur="if(this.value == '') this.value='留言区(用户需注册登录后才能留言哦)';">留言区(用户需注册登录后才能留言哦)</textarea>
                                                         </div>
                                                         <div>
@@ -706,8 +706,8 @@
                                                         </p>
 
                                                         <div class="clear"></div> -->
-                                                        <div class="text_area post_para">
-                                                            <textarea onFocus="if(this.value == '留言区(用户需注册登录后才能留言哦)') this.value='';"
+                                                        <div class="text_area">
+                                                            <textarea class="post_para" onFocus="if(this.value == '留言区(用户需注册登录后才能留言哦)') this.value='';"
                                                                       onBlur="if(this.value == '') this.value='留言区(用户需注册登录后才能留言哦)';">留言区(用户需注册登录后才能留言哦)</textarea>
                                                         </div>
                                                         <div>
@@ -909,8 +909,8 @@
                                                         </p>
 
                                                         <div class="clear"></div> -->
-                                                        <div class="text_area post_para">
-                                                            <textarea onFocus="if(this.value == '留言区(用户需注册登录后才能留言哦)') this.value='';"
+                                                        <div class="text_area">
+                                                            <textarea class="post_para" onFocus="if(this.value == '留言区(用户需注册登录后才能留言哦)') this.value='';"
                                                                       onBlur="if(this.value == '') this.value='留言区(用户需注册登录后才能留言哦)';">留言区(用户需注册登录后才能留言哦)</textarea>
                                                         </div>
                                                         <div>
@@ -1129,8 +1129,8 @@
                                                         </p>
 
                                                         <div class="clear"></div> -->
-                                                        <div class="text_area post_para">
-                                                            <textarea onFocus="if(this.value == '留言区(用户需注册登录后才能留言哦)') this.value='';"
+                                                        <div class="text_area">
+                                                            <textarea class="post_para" onFocus="if(this.value == '留言区(用户需注册登录后才能留言哦)') this.value='';"
                                                                       onBlur="if(this.value == '') this.value='留言区(用户需注册登录后才能留言哦)';">留言区(用户需注册登录后才能留言哦)</textarea>
                                                         </div>
                                                         <div>
@@ -1352,8 +1352,8 @@
                                                         </p>
 
                                                         <div class="clear"></div> -->
-                                                        <div class="text_area post_para">
-                                                            <textarea onFocus="if(this.value == '留言区(用户需注册登录后才能留言哦)') this.value='';"
+                                                        <div class="text_area">
+                                                            <textarea class="post_para" onFocus="if(this.value == '留言区(用户需注册登录后才能留言哦)') this.value='';"
                                                                       onBlur="if(this.value == '') this.value='留言区(用户需注册登录后才能留言哦)';">留言区(用户需注册登录后才能留言哦)</textarea>
                                                         </div>
                                                         <div>
@@ -1579,8 +1579,8 @@
                                                         </p>
 
                                                         <div class="clear"></div> -->
-                                                        <div class="text_area post_para">
-                                                            <textarea onFocus="if(this.value == '留言区(用户需注册登录后才能留言哦)') this.value='';"
+                                                        <div class="text_area">
+                                                            <textarea class="post_para" onFocus="if(this.value == '留言区(用户需注册登录后才能留言哦)') this.value='';"
                                                                       onBlur="if(this.value == '') this.value='留言区(用户需注册登录后才能留言哦)';">留言区(用户需注册登录后才能留言哦)</textarea>
                                                         </div>
                                                         <div>
@@ -1788,8 +1788,8 @@
                                                         </p>
 
                                                         <div class="clear"></div> -->
-                                                        <div class="text_area post_para">
-                                                            <textarea onFocus="if(this.value == '留言区(用户需注册登录后才能留言哦)') this.value='';"
+                                                        <div class="text_area">
+                                                            <textarea class="post_para" onFocus="if(this.value == '留言区(用户需注册登录后才能留言哦)') this.value='';"
                                                                       onBlur="if(this.value == '') this.value='留言区(用户需注册登录后才能留言哦)';">留言区(用户需注册登录后才能留言哦)</textarea>
                                                         </div>
                                                         <div>
