@@ -64,11 +64,8 @@ var home = JQuery(".home"),
     repassword_r = JQuery(".regist_page .repassword"),
     line_r = JQuery(".regist_page .line"),
     warnning_r = JQuery(".regist_page .warnning"),
-    postform1 = JQuery(".postform1"),
-    post_name = JQuery(".post_name"),
-    post_email = JQuery(".post_email"),
-    post_para = JQuery(".post_para"),
-    post_btn = JQuery(".post_btn");
+    post_btn = JQuery(".post_btn"),
+    name_layout = JQuery(".name_layout");
 
 var onloadDifferentPage = function(){
     /*
@@ -146,11 +143,13 @@ var onloadDifferentPage = function(){
         warnning_l.html("");
         JQuery.post("./login.php",{loginname:user_l.val(),loginpassword:password_l.val()},function(data){
            if(data){
-             alert("登陆成功");
-                warnning_l.append("<p style='font-size:10px;color:#c83434;float:left;margin:10px auto auto 20px;'>登录成功!</p>");
+             alert("登录成功");
+             name_layout.css({
+                "lineHeight":"70px",
+                "paddingLeft":"10px"
+             })
            }else{
-             alert("登陆失败");
-                warnning_l.append("<p style='font-size:10px;color:#c83434;float:left;margin:10px auto auto 20px;'>登录失败：用户名不存在或者密码输入错误，请检查后重新输入！</p>");
+             alert("登录失败");
            }
           location.reload(true);
         },'json');
@@ -191,7 +190,7 @@ var onloadDifferentPage = function(){
             warnning_r.append("<p style='font-size:10px;color:#c83434;float:left;margin:10px auto auto 20px;'>注册失败：两次输入不同，请检查第二次密码输入！</p>");
         }else{
               JQuery.post("./res.php",{name:user_r.val(),password:password_r.val()},function(data){
-                alert("成功注册");
+                alert("注册成功");
              },'json');
 
             // 空表单
@@ -209,10 +208,12 @@ var onloadDifferentPage = function(){
     post_btn.bind("click",function(){
         //获取不同form的class名中的数字 从1-7 七个表单
         event.preventDefault();
-        var num = JQuery(this).parent().parent().parent().attr("class").replace(/[^0-9]/ig,"");
-
-        if(post_name.val()!="*Name"&post_email.val()!="*Email"&&post_para.val()!="*Message"){
-            JQuery.post("./leaveMessage.php",{name:post_name.val(),email:post_email.val(),para:post_para.val(),which:num},function(data){
+        var parent = JQuery(this).parent().parent().parent();
+        var num = parent.attr("class").replace(/[^0-9]/ig,"");
+        var post_para = parent.find(".post_para");
+        console.log(post_para.val());
+        if(post_para.val()!="留言区(用户需注册登录后才能留言哦)"){
+            JQuery.post("./leaveMessage.php",{para:post_para.val(),which:num},function(data){
               alert("插入成功");
               location.reload(true);
             },'json');

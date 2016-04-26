@@ -26,7 +26,7 @@
                   </div>
                   <div class="line">
                       <span>密码:</span>
-                        <input type="text" class="password" placeholder="请输入密码" />
+                        <input type="password" class="password" placeholder="请输入密码" />
                   </div>
                   <input type="submit" class="sub_btn" value="登录" />
                   <div class="warnning"></div>
@@ -38,11 +38,11 @@
                   </div>
                   <div class="line">
                       <span>密码:</span>
-                        <input type="text" class="password" placeholder="请输入密码" />
+                        <input type="password" class="password" placeholder="请输入密码" />
                   </div>
                   <div class="line">
                       <span>再次输入密码:</span>
-                        <input type="text" class="repassword" placeholder="请再次输入密码" />
+                        <input type="password" class="repassword" placeholder="请再次输入密码" />
                   </div>
                   <input type="submit" class="sub_btn" value="注册" />
                   <div class="warnning"></div>
@@ -67,7 +67,7 @@
                             <?php if($_SESSION['username']==""&&$_COOKIE['username']==""){ ?>
                             <li><a class="scroll login_btn" href="#">注册/登录</a></li>
                             <?php }else{ ?>
-                              <li><?php if($_SESSION['username']){echo $_SESSION['username'];}else{echo $_COOKIE['username'];} ?></li>
+                              <li class="name_layout"><?php if($_SESSION['username']){echo $_SESSION['username'];}else{echo $_COOKIE['username'];} ?></li>
                               <?php } ?>
                             <div class="clear"></div>
                         </ul>
@@ -468,7 +468,7 @@
                                                     <h4>留言</h4>
 
                                                     <form class="postform1">
-                                                        <p>
+                                                        <!-- <p>
                                                             <input type="text" value="*Name" class="post_name" onFocus="this.value = '';"
                                                                    onBlur="if (this.value == '') {this.value = '*Name';}">
                                                         </p>
@@ -478,10 +478,10 @@
                                                                    onBlur="if (this.value == '') {this.value = '*Email';}">
                                                         </p>
 
-                                                        <div class="clear"></div>
+                                                        <div class="clear"></div> -->
                                                         <div class="text_area post_para">
-                                                            <textarea onFocus="if(this.value == '*Message') this.value='';"
-                                                                      onBlur="if(this.value == '') this.value='*Message';">*Message</textarea>
+                                                            <textarea onFocus="if(this.value == '留言区(用户需注册登录后才能留言哦)') this.value='';"
+                                                                      onBlur="if(this.value == '') this.value='留言区(用户需注册登录后才能留言哦)';">留言区(用户需注册登录后才能留言哦)</textarea>
                                                         </div>
                                                         <div>
                                                             <div class="button send_button">
@@ -695,7 +695,7 @@
                                                     <h4>留言</h4>
 
                                                     <form class="postform2">
-                                                        <p>
+                                                        <!-- <p>
                                                             <input type="text" value="*Name" class="post_name" onFocus="this.value = '';"
                                                                    onBlur="if (this.value == '') {this.value = '*Name';}">
                                                         </p>
@@ -705,10 +705,10 @@
                                                                    onBlur="if (this.value == '') {this.value = '*Email';}">
                                                         </p>
 
-                                                        <div class="clear"></div>
+                                                        <div class="clear"></div> -->
                                                         <div class="text_area post_para">
-                                                            <textarea onFocus="if(this.value == '*Message') this.value='';"
-                                                                      onBlur="if(this.value == '') this.value='*Message';">*Message</textarea>
+                                                            <textarea onFocus="if(this.value == '留言区(用户需注册登录后才能留言哦)') this.value='';"
+                                                                      onBlur="if(this.value == '') this.value='留言区(用户需注册登录后才能留言哦)';">留言区(用户需注册登录后才能留言哦)</textarea>
                                                         </div>
                                                         <div>
                                                             <div class="button send_button">
@@ -898,7 +898,7 @@
                                                 <div class="comments-area">
                                                     <h4>留言</h4>
                                                     <form class="postform3">
-                                                        <p>
+                                                        <!-- <p>
                                                             <input type="text" value="*Name" class="post_name" onFocus="this.value = '';"
                                                                    onBlur="if (this.value == '') {this.value = '*Name';}">
                                                         </p>
@@ -908,10 +908,10 @@
                                                                    onBlur="if (this.value == '') {this.value = '*Email';}">
                                                         </p>
 
-                                                        <div class="clear"></div>
+                                                        <div class="clear"></div> -->
                                                         <div class="text_area post_para">
-                                                            <textarea onFocus="if(this.value == '*Message') this.value='';"
-                                                                      onBlur="if(this.value == '') this.value='*Message';">*Message</textarea>
+                                                            <textarea onFocus="if(this.value == '留言区(用户需注册登录后才能留言哦)') this.value='';"
+                                                                      onBlur="if(this.value == '') this.value='留言区(用户需注册登录后才能留言哦)';">留言区(用户需注册登录后才能留言哦)</textarea>
                                                         </div>
                                                         <div>
                                                             <div class="button send_button">
@@ -1118,7 +1118,7 @@
                                                     <h4>留言</h4>
 
                                                     <form class="postform4">
-                                                        <p>
+                                                       <!--  <p>
                                                             <input type="text" value="*Name" class="post_name" onFocus="this.value = '';"
                                                                    onBlur="if (this.value == '') {this.value = '*Name';}">
                                                         </p>
@@ -1128,10 +1128,10 @@
                                                                    onBlur="if (this.value == '') {this.value = '*Email';}">
                                                         </p>
 
-                                                        <div class="clear"></div>
+                                                        <div class="clear"></div> -->
                                                         <div class="text_area post_para">
-                                                            <textarea onFocus="if(this.value == '*Message') this.value='';"
-                                                                      onBlur="if(this.value == '') this.value='*Message';">*Message</textarea>
+                                                            <textarea onFocus="if(this.value == '留言区(用户需注册登录后才能留言哦)') this.value='';"
+                                                                      onBlur="if(this.value == '') this.value='留言区(用户需注册登录后才能留言哦)';">留言区(用户需注册登录后才能留言哦)</textarea>
                                                         </div>
                                                         <div>
                                                             <div class="button send_button">
@@ -1341,7 +1341,7 @@
                                                     <h4>留言</h4>
 
                                                     <form class="postform5">
-                                                        <p>
+                                                        <!-- <p>
                                                             <input type="text" value="*Name" class="post_name" onFocus="this.value = '';"
                                                                    onBlur="if (this.value == '') {this.value = '*Name';}">
                                                         </p>
@@ -1351,10 +1351,10 @@
                                                                    onBlur="if (this.value == '') {this.value = '*Email';}">
                                                         </p>
 
-                                                        <div class="clear"></div>
+                                                        <div class="clear"></div> -->
                                                         <div class="text_area post_para">
-                                                            <textarea onFocus="if(this.value == '*Message') this.value='';"
-                                                                      onBlur="if(this.value == '') this.value='*Message';">*Message</textarea>
+                                                            <textarea onFocus="if(this.value == '留言区(用户需注册登录后才能留言哦)') this.value='';"
+                                                                      onBlur="if(this.value == '') this.value='留言区(用户需注册登录后才能留言哦)';">留言区(用户需注册登录后才能留言哦)</textarea>
                                                         </div>
                                                         <div>
                                                             <div class="button send_button">
@@ -1568,7 +1568,7 @@
                                                     <h4>留言</h4>
 
                                                     <form class="postform6">
-                                                        <p>
+                                                       <!--  <p>
                                                             <input type="text" value="*Name" class="post_name" onFocus="this.value = '';"
                                                                    onBlur="if (this.value == '') {this.value = '*Name';}">
                                                         </p>
@@ -1578,10 +1578,10 @@
                                                                    onBlur="if (this.value == '') {this.value = '*Email';}">
                                                         </p>
 
-                                                        <div class="clear"></div>
+                                                        <div class="clear"></div> -->
                                                         <div class="text_area post_para">
-                                                            <textarea onFocus="if(this.value == '*Message') this.value='';"
-                                                                      onBlur="if(this.value == '') this.value='*Message';">*Message</textarea>
+                                                            <textarea onFocus="if(this.value == '留言区(用户需注册登录后才能留言哦)') this.value='';"
+                                                                      onBlur="if(this.value == '') this.value='留言区(用户需注册登录后才能留言哦)';">留言区(用户需注册登录后才能留言哦)</textarea>
                                                         </div>
                                                         <div>
                                                             <div class="button send_button">
@@ -1777,7 +1777,7 @@
                                                     <h4>留言</h4>
 
                                                     <form class="postform7">
-                                                        <p>
+                                                       <!--  <p>
                                                             <input type="text" value="*Name" class="post_name" onFocus="this.value = '';"
                                                                    onBlur="if (this.value == '') {this.value = '*Name';}">
                                                         </p>
@@ -1787,10 +1787,10 @@
                                                                    onBlur="if (this.value == '') {this.value = '*Email';}">
                                                         </p>
 
-                                                        <div class="clear"></div>
+                                                        <div class="clear"></div> -->
                                                         <div class="text_area post_para">
-                                                            <textarea onFocus="if(this.value == '*Message') this.value='';"
-                                                                      onBlur="if(this.value == '') this.value='*Message';">*Message</textarea>
+                                                            <textarea onFocus="if(this.value == '留言区(用户需注册登录后才能留言哦)') this.value='';"
+                                                                      onBlur="if(this.value == '') this.value='留言区(用户需注册登录后才能留言哦)';">留言区(用户需注册登录后才能留言哦)</textarea>
                                                         </div>
                                                         <div>
                                                             <div class="button send_button">
@@ -1911,18 +1911,18 @@
                     <h4 style="color:#fff;margin-left:5px">意见反馈</h4>
 
                     <form method="post" action="#">
-                        <input type="text" class="textbox" value=" Name" onFocus="this.value = '';"
-                               onBlur="if (this.value == '') {this.value = 'Name';}">
+                        <input type="text" class="textbox" value="姓名" onFocus="this.value = '';"
+                               onBlur="if (this.value == '') {this.value = '姓名';}">
                         <input type="text" class="textbox" value="Email" onFocus="this.value = '';"
                                onBlur="if (this.value == '') {this.value = 'Email';}">
 
                         <div class="clear"></div>
                         <div>
                             <textarea value="Message:" onFocus="this.value = '';"
-                                      onBlur="if (this.value == '') {this.value = ' Message';}" style="font-family:'微软雅黑'">Message</textarea>
+                                      onBlur="if (this.value == '') {this.value = '反馈信息';}" style="font-family:'微软雅黑'">反馈信息</textarea>
                         </div>
                         <div class="button send_button">
-                            <input type="submit" value="Send">
+                            <input type="submit" value="Send" onclick="alert("您的信息已反馈，请等待几天后的回复，谢谢！")">
                         </div>
                         <div class="clear"></div>
                     </form>
