@@ -65,7 +65,8 @@ var home = JQuery(".home"),
     line_r = JQuery(".regist_page .line"),
     warnning_r = JQuery(".regist_page .warnning"),
     postform1 = JQuery(".postform1"),
-    post_btn = JQuery(".post_btn");
+    post_btn = JQuery(".post_btn"),
+    post_name = JQuery(".post_name");
 
 var onloadDifferentPage = function(){
     /*
@@ -210,11 +211,12 @@ var onloadDifferentPage = function(){
         var num = parent.attr("class").replace(/[^0-9]/ig,"");
         var post_para = parent.find(".post_para");
         var comments = parent.parent().siblings('.comments');
+        var newgrid = "<div class='c_grid'><div class='person_1'><a href='#'><span> </span></a></div><div class='desc'><div class='c_sub_grid'><p><a class='new_name' href='#'>"+post_name.val()+"</a></p><div class='clear'></div></div><div class='para'><p class='new_para'>"+post_para.val()+"</p></div></div><div class='clear'></div></div>"; 
+        JQuery(newgrid).appendTo(comments);
         if(post_para.val()!="留言区(用户需注册登录后才能留言哦)"){
             //data为用户名和日期
             JQuery.post("./leaveMessage.php",{para:post_para.val(),which:num},function(data){
-                var newgrid = "<div class='c_grid'><div class='person_1'><a href='#'><span> </span></a></div><div class='desc'><div class='c_sub_grid'><p><a class='new_name' href='#'>"+data+"</a></p><div class='clear'></div></div><div class='para'><p class='new_para'>"+post_para.val()+"</p></div></div><div class='clear'></div></div>"; 
-                JQuery(newgrid).appendTo(comments);
+                
                 alert("插入成功");
                 location.reload(true);
             },'json');

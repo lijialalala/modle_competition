@@ -67,7 +67,7 @@
                             <?php if($_SESSION['username']==""&&$_COOKIE['username']==""){ ?>
                             <li><a class="scroll login_btn" href="#">注册/登录</a></li>
                             <?php }else{ ?>
-                              <li style="line-height:70px;padding-left:10px;"><?php echo $_COOKIE['username']; ?></li>
+                              <li class="post_name" style="line-height:70px;padding-left:10px;color:#C83434;font-weight:bold;"><?php echo $_COOKIE['username']; ?></li>
                               <?php } ?>
                             <div class="clear"></div>
                         </ul>
@@ -1509,6 +1509,7 @@
                                                         </div>
                                                         <div class="clear"></div>
                                                     </div>
+
                                                 </div>
                                                 <div class="comments-area">
                                                     <h4>留言</h4>
