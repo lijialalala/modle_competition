@@ -307,7 +307,7 @@
                                 </div>
                             </div>
                             <div class="pagination">
-                                <a href="#" class="member_more">阅读更多</a>
+                                <a href="member.php">阅读更多</a>
                             </div>
                         </div>
                     </div>
