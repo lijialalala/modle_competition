@@ -72,24 +72,24 @@ var onloadDifferentPage = function(){
     /*
     首页成员页的切换函数
      */
-    var changePage = function(btn,page){
-        btn.bind("click",function(){
-            JQuery(".home,.member,.vote").removeClass("active");
-            btn.addClass("active");
-            JQuery("#home_page,#member_page,#vote_page").css("display","none");
-            page.css("display","block");
-        });
-    };
-    changePage(home,homepage);
-    changePage(vote,votepage);
-    JQuery(".member,.member_more").each(function(){
-        JQuery(this).bind("click",function(){
-            JQuery(".home,.member,.vote").removeClass("active");
-            member.addClass("active");
-            JQuery("#home_page,#member_page,#vote_page").css("display","none");
-            memberpage.css("display","block");
-        });
-    });
+    // var changePage = function(btn,page){
+    //     btn.bind("click",function(){
+    //         JQuery(".home,.member,.vote").removeClass("active");
+    //         btn.addClass("active");
+    //         JQuery("#home_page,#member_page,#vote_page").css("display","none");
+    //         page.css("display","block");
+    //     });
+    // };
+    // changePage(home,homepage);
+    // changePage(vote,votepage);
+    // JQuery(".member,.member_more").each(function(){
+    //     JQuery(this).bind("click",function(){
+    //         JQuery(".home,.member,.vote").removeClass("active");
+    //         member.addClass("active");
+    //         JQuery("#home_page,#member_page,#vote_page").css("display","none");
+    //         memberpage.css("display","block");
+    //     });
+    // });
     /*
     点击登录注册按钮
     form里登录/注册的切换函数

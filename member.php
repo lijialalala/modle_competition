@@ -10,7 +10,9 @@ require_once"db.php";
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>第四季《我是歌手》</title>
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
-    <link rel="stylesheet" type="text/css" href="css/style.min.css">
+    <link rel="stylesheet" type="text/css" href="css/card.css"/>
+    <link rel="stylesheet" type="text/css" href="css/pattern.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style2.css">
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <!--[if IE]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
