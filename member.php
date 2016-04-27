@@ -234,7 +234,7 @@ require_once"db.php";
                                                             </div>
                                                             <div class="desc">
                                                                 <div class="c_sub_grid">
-                                                                    <p><a href="#"><?php echo $rows[$i]['name'];echo $rows[$i]['time']; ?></a></p>
+                                                                    <p><a href="#"><?php echo $rows[$i]['name'];?></a></p>
                                                                     <div class="clear"></div>
                                                                 </div>
                                                                 <div class="para">
@@ -301,7 +301,7 @@ require_once"db.php";
 
                                                 <div class="link_1">
                                                     <p><a href="http://open.baidu.com/special/time/">Sep 26,2013 </a></p>
-                                                    <a href="http://baike.baidu.com/link?url=8f9yFmpVeihnd0h7-YM1FWCsmyKB74g_r6A8ck5r8DDQ3nlYrrBoTQSrcPOibZH7j8fE9ws6crGFQpuRDjrMuYIEr4vsl2LfpAO2hw0vRGQopH1cZdTzrp6dGgKuBae34Q4fLbKHXVBJpVidEdUqaV6k3gvI2LVZId47tVBdTFZJINLMgXorrVe0lK5xqTxl"
+                                                    <a href="http://baike.baidu.com/link?url=ARVXCT-ZSTkCz2ybRTVCQNjI1oFM6-CXflphNr9xky2pTI31-OIuudPynmasP8NT6YQY9xc1VfGHwiAMEBbUorbftomZhvWdccltN1gannq"
                                                        class="arrow_btn right">Read More</a>
 
                                                     <div class="clear"></div>
@@ -524,7 +524,7 @@ require_once"db.php";
 
                                                 <div class="link_1">
                                                     <p><a href="http://open.baidu.com/special/time/">Sep 26,2013 </a></p>
-                                                    <a href="http://baike.baidu.com/link?url=Gxh4jkxDzTkhaEpITdNyUCE7O6reQr8hD6RW38gHRe-jZYwq0Oca7BSvAjfUe0AltozQgDIvVlYeMv0CexeBRa"
+                                                    <a href="http://baike.baidu.com/link?url=N11SQrFbo3UYkYyZkRRXYLbK0IpsgjIdkFmWzjwAARM3v5nHapZ6DK8OAFjinTVvPU2byMehQ1P11ZohQRRnq4jEI6e5jp3k4nr2b15S3Yi"
                                                        class="arrow_btn right">Read More</a>
 
                                                     <div class="clear"></div>
@@ -717,7 +717,7 @@ require_once"db.php";
 
                                                 <div class="link_1">
                                                     <p><a href="http://open.baidu.com/special/time/">Sep 26,2013 </a></p>
-                                                    <a href="http://baike.baidu.com/link?url=8f9yFmpVeihnd0h7-YM1FWCsmyKB74g_r6A8ck5r8DDQ3nlYrrBoTQSrcPOibZH7j8fE9ws6crGFQpuRDjrMuYIEr4vsl2LfpAO2hw0vRGQopH1cZdTzrp6dGgKuBae34Q4fLbKHXVBJpVidEdUqaV6k3gvI2LVZId47tVBdTFZJINLMgXorrVe0lK5xqTxl"
+                                                    <a href="http://baike.baidu.com/link?url=2X-zTggYjaANfWahFYo3m7PSyokI5Z0cULdc-puWquPUo1iQePILdSfDLh54fTLGHCYTBiZKfRkUtXlVNX3-0a"
                                                        class="arrow_btn right">Read More</a>
 
                                                     <div class="clear"></div>
@@ -913,7 +913,7 @@ require_once"db.php";
 
                                                 <div class="link_1">
                                                     <p><a href="http://open.baidu.com/special/time/">Sep 26,2013 </a></p>
-                                                    <a href="http://baike.baidu.com/link?url=Q_woeJHzp5jBrLRrIrLUj337oseik08lH4GacejxpWkXs7vmI9rBchahmJa_xXF8zStCAZPxY1SxkvpG-DRXE_"
+                                                    <a href="http://baike.baidu.com/view/5439.htm"
                                                        class="arrow_btn right">Read More</a>
 
                                                     <div class="clear"></div>
@@ -1113,7 +1113,7 @@ require_once"db.php";
 
                                                 <div class="link_1">
                                                     <p><a href="http://open.baidu.com/special/time/">Sep 26,2013 </a></p>
-                                                    <a href="http://baike.baidu.com/link?url=sqqMGlJlFTnWnr8ioFcWUMcN_0dPvWtZU2j0QnXlWaC2q7_6Qz3y0Fkf5mRKM_m2AFSSF2o5l1BfZv6sXr-tM6xGpLJ43ungd-YYmV0EOnG"
+                                                    <a href="http://baike.baidu.com/view/59779.htm"
                                                        class="arrow_btn right">Read More</a>
 
                                                     <div class="clear"></div>
@@ -1317,7 +1317,7 @@ require_once"db.php";
 
                                                 <div class="link_1">
                                                     <p><a href="http://open.baidu.com/special/time/">Sep 26,2013 </a></p>
-                                                    <a href="http://baike.baidu.com/link?url=9_6CY1xfjwUBBX7WsBZAkNzgNJYBE990Ia-7eutNg61-J4FQu816LoS3rIQnfrlvsKNv9FaHFgomNP3YbdqzLa"
+                                                    <a href="http://baike.baidu.com/view/16899.htm"
                                                        class="arrow_btn right">Read More</a>
 
                                                     <div class="clear"></div>
@@ -1520,7 +1520,7 @@ require_once"db.php";
 
                                                 <div class="link_1">
                                                     <p><a href="http://open.baidu.com/special/time/">Sep 26,2013 </a></p>
-                                                    <a href="http://baike.baidu.com/link?url=9_6CY1xfjwUBBX7WsBZAkNzgNJYBE990Ia-7eutNg61-J4FQu816LoS3rIQnfrlvsKNv9FaHFgomNP3YbdqzLa"
+                                                    <a href="http://baike.baidu.com/view/6056.htm"
                                                        class="arrow_btn right">Read More</a>
 
                                                     <div class="clear"></div>

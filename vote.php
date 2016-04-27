@@ -62,7 +62,7 @@ function fetchAll($sql,$result_type=MYSQL_ASSOC){
                    }else{
                      alert("登录失败");
                    }
-                  location.reload(true);
+                location.reload(true);
                 },'json');
 
                 // 空表单
