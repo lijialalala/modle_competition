@@ -34,15 +34,7 @@ var JQuery = jQuery.noConflict();
             });
     });
     });
-var home = JQuery(".home"),
-    member = JQuery(".member"),
-    vote = JQuery(".vote"),
-    hearder = JQuery(".header_bg"),
-    homepage = JQuery("#home_page"),
-    memberpage = JQuery("#member_page"),
-    votepage = JQuery("#vote_page"),
-    more = JQuery(".member_more"),
-    login_btn = JQuery(".login_btn"),
+var login_btn = JQuery(".login_btn"),
     main = JQuery(".main"),
     mask = JQuery(".mask"),
     close = JQuery(".close"),
