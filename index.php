@@ -67,7 +67,7 @@
                             <?php if($_SESSION['username']==""&&$_COOKIE['username']==""){ ?>
                             <li><a class="scroll login_btn" href="#">注册/登录</a></li>
                             <?php }else{ ?>
-                              <li class="name_layout"><?php echo $_COOKIE['username']; ?></li>
+                              <li style="line-height:70px;padding-left:10px;"><?php echo $_COOKIE['username']; ?></li>
                               <?php } ?>
                             <div class="clear"></div>
                         </ul>
@@ -445,7 +445,6 @@
                                                         <div class="desc">
                                                             <div class="c_sub_grid">
                                                                 <p><a href="#">almodove,(22级) 2015-07-21 21:34  亮了(1) </a></p>
-                                                                <h6><a href="#">立即回复</a></h6>
 
                                                                 <div class="clear"></div>
                                                             </div>
@@ -680,7 +679,6 @@
                                                         <div class="desc">
                                                             <div class="c_sub_grid">
                                                                 <p><a href="#">橘子味吖_ | 二级 </a></p>
-                                                                <h6><a href="#">立即回复</a></h6>
 
                                                                 <div class="clear"></div>
                                                             </div>
@@ -695,17 +693,6 @@
                                                     <h4>留言</h4>
 
                                                     <form class="postform2">
-                                                        <!-- <p>
-                                                            <input type="text" value="*Name" class="post_name" onFocus="this.value = '';"
-                                                                   onBlur="if (this.value == '') {this.value = '*Name';}">
-                                                        </p>
-
-                                                        <p>
-                                                            <input type="text" value="*Email" class="post_email" onFocus="this.value = '';"
-                                                                   onBlur="if (this.value == '') {this.value = '*Email';}">
-                                                        </p>
-
-                                                        <div class="clear"></div> -->
                                                         <div class="text_area">
                                                             <textarea class="post_para" onFocus="if(this.value == '留言区(用户需注册登录后才能留言哦)') this.value='';"
                                                                       onBlur="if(this.value == '') this.value='留言区(用户需注册登录后才能留言哦)';">留言区(用户需注册登录后才能留言哦)</textarea>
@@ -882,7 +869,6 @@
                                                         <div class="desc">
                                                             <div class="c_sub_grid">
                                                                 <p><a href="#">Waring,4 Oct 2015 </a></p>
-                                                                <h6><a href="#">立即回复</a></h6>
 
                                                                 <div class="clear"></div>
                                                             </div>
@@ -898,17 +884,6 @@
                                                 <div class="comments-area">
                                                     <h4>留言</h4>
                                                     <form class="postform3">
-                                                        <!-- <p>
-                                                            <input type="text" value="*Name" class="post_name" onFocus="this.value = '';"
-                                                                   onBlur="if (this.value == '') {this.value = '*Name';}">
-                                                        </p>
-
-                                                        <p>
-                                                            <input type="text" value="*Email" class="post_email" onFocus="this.value = '';"
-                                                                   onBlur="if (this.value == '') {this.value = '*Email';}">
-                                                        </p>
-
-                                                        <div class="clear"></div> -->
                                                         <div class="text_area">
                                                             <textarea class="post_para" onFocus="if(this.value == '留言区(用户需注册登录后才能留言哦)') this.value='';"
                                                                       onBlur="if(this.value == '') this.value='留言区(用户需注册登录后才能留言哦)';">留言区(用户需注册登录后才能留言哦)</textarea>
@@ -1085,7 +1060,6 @@
                                                         <div class="desc">
                                                             <div class="c_sub_grid">
                                                                 <p><a href="#">小_老_肥 (25级) 2015-02-13 21:52   亮了</a></p>
-                                                                <h6><a href="#">立即回复</a></h6>
 
                                                                 <div class="clear"></div>
                                                             </div>
@@ -1102,7 +1076,6 @@
                                                         <div class="desc">
                                                             <div class="c_sub_grid">
                                                                 <p><a href="#">xiangyinyiyi (38级) 2015-02-13 23:03   亮了</a></p>
-                                                                <h6><a href="#">立即回复</a></h6>
 
                                                                 <div class="clear"></div>
                                                             </div>
@@ -1118,17 +1091,6 @@
                                                     <h4>留言</h4>
 
                                                     <form class="postform4">
-                                                       <!--  <p>
-                                                            <input type="text" value="*Name" class="post_name" onFocus="this.value = '';"
-                                                                   onBlur="if (this.value == '') {this.value = '*Name';}">
-                                                        </p>
-
-                                                        <p>
-                                                            <input type="text" value="*Email" class="post_email" onFocus="this.value = '';"
-                                                                   onBlur="if (this.value == '') {this.value = '*Email';}">
-                                                        </p>
-
-                                                        <div class="clear"></div> -->
                                                         <div class="text_area">
                                                             <textarea class="post_para" onFocus="if(this.value == '留言区(用户需注册登录后才能留言哦)') this.value='';"
                                                                       onBlur="if(this.value == '') this.value='留言区(用户需注册登录后才能留言哦)';">留言区(用户需注册登录后才能留言哦)</textarea>
@@ -1308,7 +1270,6 @@
                                                         <div class="desc">
                                                             <div class="c_sub_grid">
                                                                 <p><a href="#">Waring,10 Sep 2015 </a></p>
-                                                                <h6><a href="#">立即回复</a></h6>
 
                                                                 <div class="clear"></div>
                                                             </div>
@@ -1325,7 +1286,6 @@
                                                         <div class="desc">
                                                             <div class="c_sub_grid">
                                                                 <p><a href="#">Alern,10 Sep 2015 </a></p>
-                                                                <h6><a href="#">立即回复</a></h6>
 
                                                                 <div class="clear"></div>
                                                             </div>
@@ -1341,17 +1301,6 @@
                                                     <h4>留言</h4>
 
                                                     <form class="postform5">
-                                                        <!-- <p>
-                                                            <input type="text" value="*Name" class="post_name" onFocus="this.value = '';"
-                                                                   onBlur="if (this.value == '') {this.value = '*Name';}">
-                                                        </p>
-
-                                                        <p>
-                                                            <input type="text" value="*Email" class="post_email" onFocus="this.value = '';"
-                                                                   onBlur="if (this.value == '') {this.value = '*Email';}">
-                                                        </p>
-
-                                                        <div class="clear"></div> -->
                                                         <div class="text_area">
                                                             <textarea class="post_para" onFocus="if(this.value == '留言区(用户需注册登录后才能留言哦)') this.value='';"
                                                                       onBlur="if(this.value == '') this.value='留言区(用户需注册登录后才能留言哦)';">留言区(用户需注册登录后才能留言哦)</textarea>
@@ -1535,7 +1484,6 @@
                                                         <div class="desc">
                                                             <div class="c_sub_grid">
                                                                 <p><a href="#">Waring,2 Nov 2015 </a></p>
-                                                                <h6><a href="#">立即回复</a></h6>
 
                                                                 <div class="clear"></div>
                                                             </div>
@@ -1552,7 +1500,6 @@
                                                         <div class="desc">
                                                             <div class="c_sub_grid">
                                                                 <p><a href="#">Alern,10 Sep 2015 </a></p>
-                                                                <h6><a href="#">立即回复</a></h6>
 
                                                                 <div class="clear"></div>
                                                             </div>
@@ -1562,23 +1509,11 @@
                                                         </div>
                                                         <div class="clear"></div>
                                                     </div>
-
                                                 </div>
                                                 <div class="comments-area">
                                                     <h4>留言</h4>
 
                                                     <form class="postform6">
-                                                       <!--  <p>
-                                                            <input type="text" value="*Name" class="post_name" onFocus="this.value = '';"
-                                                                   onBlur="if (this.value == '') {this.value = '*Name';}">
-                                                        </p>
-
-                                                        <p>
-                                                            <input type="text" value="*Email" class="post_email" onFocus="this.value = '';"
-                                                                   onBlur="if (this.value == '') {this.value = '*Email';}">
-                                                        </p>
-
-                                                        <div class="clear"></div> -->
                                                         <div class="text_area">
                                                             <textarea class="post_para" onFocus="if(this.value == '留言区(用户需注册登录后才能留言哦)') this.value='';"
                                                                       onBlur="if(this.value == '') this.value='留言区(用户需注册登录后才能留言哦)';">留言区(用户需注册登录后才能留言哦)</textarea>
@@ -1762,7 +1697,6 @@
                                                         <div class="desc">
                                                             <div class="c_sub_grid">
                                                                 <p><a href="#">Waring,2 Nov 2016 </a></p>
-                                                                <h6><a href="#">立即回复</a></h6>
 
                                                                 <div class="clear"></div>
                                                             </div>
@@ -1777,17 +1711,6 @@
                                                     <h4>留言</h4>
 
                                                     <form class="postform7">
-                                                       <!--  <p>
-                                                            <input type="text" value="*Name" class="post_name" onFocus="this.value = '';"
-                                                                   onBlur="if (this.value == '') {this.value = '*Name';}">
-                                                        </p>
-
-                                                        <p>
-                                                            <input type="text" value="*Email" class="post_email" onFocus="this.value = '';"
-                                                                   onBlur="if (this.value == '') {this.value = '*Email';}">
-                                                        </p>
-
-                                                        <div class="clear"></div> -->
                                                         <div class="text_area">
                                                             <textarea class="post_para" onFocus="if(this.value == '留言区(用户需注册登录后才能留言哦)') this.value='';"
                                                                       onBlur="if(this.value == '') this.value='留言区(用户需注册登录后才能留言哦)';">留言区(用户需注册登录后才能留言哦)</textarea>

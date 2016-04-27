@@ -57,16 +57,17 @@ function fetchAll($sql,$result_type=MYSQL_ASSOC){
             subbtn_l.bind("click",function(){
                 warnning_l.html("");
                 JQuery.post("./login.php",{loginname:user_l.val(),loginpassword:password_l.val()},function(data){
-                    console.log(data+"");
                    if(data){
-                        warnning_l.append("<p style='font-size:10px;color:#c83434;float:left;margin:10px auto auto 20px;'>登录成功!</p>");
+                     alert("登录成功");
                    }else{
-                        warnning_l.append("<p style='font-size:10px;color:#c83434;float:left;margin:10px auto auto 20px;'>登录失败：用户名不存在或者密码输入错误，请检查后重新输入！</p>");
+                     alert("登录失败");
                    }
+                  location.reload(true);
                 },'json');
 
                 // 空表单
                 if( !(user_l.val()&&password_l.val()) ){
+                    //padding 50px
                     warnning_l.append("<p style='font-size:10px;color:#c83434;float:left;margin:50px auto auto 20px;'>*所有信息都是需要填写的！</p>");
                 }else{
                    closeForm();
@@ -74,17 +75,18 @@ function fetchAll($sql,$result_type=MYSQL_ASSOC){
             });
 
             /*注册点击提交*/
-             subbtn_r.bind("click",function(){
+            subbtn_r.bind("click",function(){
                 warnning_r.html("");
                 if(repassword_r.val()!=password_r.val()){
                     warnning_r.append("<p style='font-size:10px;color:#c83434;float:left;margin:10px auto auto 20px;'>注册失败：两次输入不同，请检查第二次密码输入！</p>");
                 }else{
                       JQuery.post("./res.php",{name:user_r.val(),password:password_r.val()},function(data){
-
+                        alert("成功注册");
                      },'json');
 
                     // 空表单
                     if( !(user_r.val()&&password_r.val()&&repassword_r.val()) ){
+                        //padding 50px
                         warnning_r.append("<p style='font-size:10px;color:#c83434;float:left;margin:50px auto auto 20px;'>注册失败：所有信息都是需要填写的！</p>");
                     }else{
                         closeForm();
@@ -148,11 +150,11 @@ function fetchAll($sql,$result_type=MYSQL_ASSOC){
                                target="_blank">音乐试听</a></li>
                         <li class="active"><a class="scroll" href="vote.php">为他投票</a></li>
                         <li><a class="scroll" href="#contact">联系我们</a></li>
-												<?php if($_COOKIE['username']==null){ ?>
-												<li><a class="scroll login_btn" href="#">注册/登录</a></li>
-												<?php }else{ ?>
-													<li class="name_layout"><?php echo $_COOKIE['username']; ?></li>
-													<?php } ?>
+						<?php if($_COOKIE['username']==null){ ?>
+						<li><a class="scroll login_btn" href="#">注册/登录</a></li>
+						<?php }else{ ?>
+							<li style="line-height:70px;padding-left:10px;"><?php echo $_COOKIE['username']; ?></li>
+							<?php } ?>
                         <div class="clear"></div>
                     </ul>
                 </nav>
